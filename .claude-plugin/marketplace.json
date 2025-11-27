@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "sablier-plugins",
+  "version": "1.0.0",
+  "description": "Claude Code plugin marketplace for Sablier projects",
+  "owner": {
+    "name": "Sablier",
+    "email": "contact@sablier.com"
+  },
+  "plugins": [
+    {
+      "name": "sablier",
+      "description": "General-purpose development tools for TypeScript, React, and Next.js projects. Includes skills for Vitest testing, Zustand state management, Tailwind CSS v4, Effect.ts + Next.js patterns, and UI/UX design guidance.",
+      "version": "1.0.0",
+      "source": "./plugins/sablier",
+      "category": "development"
+    }
+  ]
+}
