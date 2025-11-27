@@ -37,6 +37,8 @@ type Handler = (req: Request) => Promise<Response>;
 export const POST: Handler = handler;
 ```
 
+For most applications, you should prioritize using the `HttpApi` framework over the `HttpApp` framework. Use `HttpApp` only for very simple API handlers that don't require a lot of customization.
+
 ## Effect HttpApi Framework
 
 Build type-safe APIs with automatic OpenAPI generation, Swagger UI, and client SDK.

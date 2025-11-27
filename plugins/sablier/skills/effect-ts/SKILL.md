@@ -1,0 +1,235 @@
+---
+name: effect-ts
+description: This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X with effect", "effect pattern for", "refactor to effect", "convert to effect", "effect service", "effect layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Covers writing, refactoring, debugging, testing, or reviewing any code using the Effect library.
+---
+
+# Effect-TS Expert
+
+Expert guidance for functional programming with the Effect library, covering error handling, dependency injection,
+composability, and testing patterns.
+
+## Prerequisites Check
+
+Before starting any Effect-related work, verify the required local resources exist:
+
+```
+~/.effect/effect     → Effect-TS source code repository
+~/.effect/examples   → Effect usage examples in Markdown
+~/.effect/guide      → Effect guides and documentation
+```
+
+**If any directory is missing, stop immediately and inform the user.** These directories are required for accurate
+Effect guidance. The user must clone them before proceeding:
+
+```bash
+mkdir -p ~/.effect
+git clone https://github.com/Effect-TS/effect.git ~/.effect/effect
+# examples and guide repositories must also be cloned
+```
+
+## Research Strategy
+
+Effect-TS has many ways to accomplish the same task. Proactively research best practices using the Task tool to spawn
+research agents when working with Effect patterns, especially for moderate to high complexity tasks.
+
+### Research Sources (Priority Order)
+
+1. **Codebase Patterns First** — Examine similar patterns in the current project before implementing. If Effect patterns
+   exist in the codebase, follow them for consistency. If no patterns exist, skip this step.
+
+1. **Effect Source Code** — For complex type errors, unclear behavior, or implementation details, examine the Effect
+   source at `~/.effect/effect/packages/effect/src/`. This contains the core Effect logic and modules.
+
+1. **Effect Examples** — Consult `~/.effect/examples/` for practical usage patterns.
+
+1. **Effect Guide** — Reference `~/.effect/guide/` for conceptual explanations. Check its README for structure.
+
+### When to Research
+
+**HIGH Priority (Always Research):**
+
+- Implementing Services, Layers, or complex dependency injection
+- Error handling with multiple error types or complex error hierarchies
+- Stream-based operations and reactive patterns
+- Resource management with scoped effects and cleanup
+- Concurrent/parallel operations and performance-critical code
+- Testing patterns, especially unfamiliar test scenarios
+
+**MEDIUM Priority (Research if Complex):**
+
+- Refactoring imperative code (try-catch, promises) to Effect patterns
+- Adding new service dependencies or restructuring service layers
+- Custom error types or extending existing error hierarchies
+- Integrations with external systems (databases, APIs, third-party services)
+
+### Research Approach
+
+- Spawn multiple concurrent Task agents when investigating multiple related patterns
+- Focus on finding canonical, readable, and maintainable solutions rather than clever optimizations
+- Verify suggested approaches against existing codebase patterns for consistency (if patterns exist)
+- When multiple approaches are possible, research to find the most idiomatic Effect-TS solution
+
+## Codebase Pattern Discovery
+
+When working in a project that uses Effect, check for existing patterns before implementing new code:
+
+1. **Search for Effect imports** — Look for files importing from `'effect'` to understand existing usage
+1. **Identify service patterns** — Find how Services and Layers are structured in the project
+1. **Note error handling conventions** — Check how errors are defined and propagated
+1. **Examine test patterns** — Look at how Effect code is tested in the project
+
+**If no Effect patterns exist in the codebase**, proceed using canonical patterns from the Effect source and examples.
+Do not block on missing codebase patterns.
+
+## Effect Principles
+
+Apply these core principles when writing Effect code:
+
+### Error Handling
+
+- Use Effect's typed error system instead of throwing exceptions
+- Define descriptive error types with proper error propagation
+- Use `Effect.fail`, `Effect.catchTag`, `Effect.catchAll` for error control flow
+- See `references/CRITICAL_RULES.md` for forbidden patterns
+
+### Dependency Injection
+
+- Implement dependency injection using Services and Layers
+- Define services with `Context.Tag`
+- Compose layers with `Layer.merge`, `Layer.provide`
+- Use `Effect.provide` to inject dependencies
+
+### Composability
+
+- Leverage Effect's composability for complex operations
+- Use appropriate constructors: `Effect.succeed`, `Effect.fail`, `Effect.tryPromise`, `Effect.try`
+- Apply proper resource management with scoped effects
+- Chain operations with `Effect.flatMap`, `Effect.map`, `Effect.tap`
+
+### Code Quality
+
+- Write type-safe code that leverages Effect's type system
+- Use `Effect.gen` for readable sequential code
+- Implement proper testing patterns using Effect's testing utilities
+- Prefer `Effect.fn()` for automatic telemetry and better stack traces
+
+## Critical Rules
+
+Read and internalize `references/CRITICAL_RULES.md` before writing any Effect code. These rules are non-negotiable:
+
+- **FORBIDDEN:** try-catch in Effect.gen
+- **FORBIDDEN:** Type assertions (as never/any/unknown)
+- **MANDATORY:** return yield\* pattern for errors
+
+## Explaining Solutions
+
+When providing solutions, explain the Effect-TS concepts being used and why they're appropriate for the specific use
+case. If encountering patterns not covered in the documentation, suggest improvements while maintaining consistency with
+existing codebase patterns (when they exist).
+
+## Quick Reference
+
+### Creating Effects
+
+```typescript
+Effect.succeed(value)           // Wrap success value
+Effect.fail(error)              // Create failed effect
+Effect.tryPromise(fn)           // Wrap promise-returning function
+Effect.try(fn)                  // Wrap synchronous throwing function
+Effect.sync(fn)                 // Wrap synchronous non-throwing function
+```
+
+### Composing Effects
+
+```typescript
+Effect.flatMap(effect, fn)      // Chain effects
+Effect.map(effect, fn)          // Transform success value
+Effect.tap(effect, fn)          // Side effect without changing value
+Effect.all([...effects])        // Run effects in parallel
+Effect.forEach(items, fn)       // Map over items with effects
+```
+
+### Error Handling
+
+```typescript
+Effect.catchTag(effect, tag, fn) // Handle specific error tag
+Effect.catchAll(effect, fn)      // Handle all errors
+Effect.result(effect)            // Convert to Exit value
+Effect.orElse(effect, alt)       // Fallback effect
+```
+
+### Services and Layers
+
+```typescript
+// Pattern 1: Context.Tag (implementation provided separately via Layer)
+class MyService extends Context.Tag("MyService")<MyService, { ... }>() {}
+const MyServiceLive = Layer.succeed(MyService, { ... })
+Effect.provide(effect, MyServiceLive)
+
+// Pattern 2: Effect.Service (default implementation bundled)
+class UserRepo extends Effect.Service<UserRepo>()("UserRepo", {
+  effect: Effect.gen(function* () {
+    return { findAll: Effect.succeed([]) }
+  })
+}) {}
+Effect.provide(effect, UserRepo.Default)  // .Default layer auto-generated
+```
+
+### Generator Pattern
+
+```typescript
+Effect.gen(function* () {
+  const a = yield* effectA;
+  const b = yield* effectB;
+  if (error) {
+    return yield* Effect.fail(new MyError());
+  }
+  return result;
+});
+```
+
+### Resource Management
+
+```typescript
+Effect.acquireUseRelease(acquire, use, release)  // Bracket pattern
+Effect.scoped(effect)                            // Scope lifetime to effect
+Effect.addFinalizer(cleanup)                     // Register cleanup action
+```
+
+### Scheduling
+
+```typescript
+Effect.retry(effect, Schedule.exponential("100 millis"))  // Retry with backoff
+Effect.repeat(effect, Schedule.fixed("1 second"))         // Repeat on schedule
+Schedule.compose(s1, s2)                                  // Combine schedules
+```
+
+### State Management
+
+```typescript
+Ref.make(initialValue)       // Mutable reference
+Ref.get(ref)                 // Read value
+Ref.set(ref, value)          // Write value
+Deferred.make<E, A>()        // One-time async value
+```
+
+### Concurrency
+
+```typescript
+Effect.fork(effect)              // Run in background fiber
+Fiber.join(fiber)                // Wait for fiber result
+Effect.race(effect1, effect2)    // First to complete wins
+Effect.all([...effects], { concurrency: "unbounded" })
+```
+
+## Additional Resources
+
+### Local Effect Resources
+
+- **`~/.effect/effect/packages/effect/src/`** — Core Effect modules and implementation
+- **`~/.effect/examples/`** — Practical Effect usage examples
+- **`~/.effect/guide/`** — Conceptual guides and documentation
+
+### Reference Files
+
+- **`references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions

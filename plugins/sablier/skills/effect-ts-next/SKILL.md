@@ -10,13 +10,7 @@ actions, route handlers, and server components.
 
 ## Effect Documentation
 
-For Effect-ts fundamentals, fetch from these Context7 MCP resources:
-
-- `/effect-ts/effect` - Core Effect library
-- `/llmstxt/effect_website_llms_txt` - Official Effect docs
-- `/llmstxt/effect_website_llms-full_txt` - Full Effect documentation
-
-Or fetch directly: https://effect.website/llms.txt
+For Effect-ts fundamentals, invoke the `sablier:effect-ts` skill in this plugin.
 
 This skill covers **only** Effect-ts + Next.js integration patterns.
 
