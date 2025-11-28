@@ -258,7 +258,7 @@ Use container-based units like `cqw` for responsive sizing:
 
 ### Text Shadows (v4.1)
 
-Use text-shadow-\* utilities from text-shadow-2xs to text-shadow-lg:
+Use `text-shadow-*` utilities from `text-shadow-2xs` to `text-shadow-lg`:
 
 ```html
 <!-- Text shadow examples -->

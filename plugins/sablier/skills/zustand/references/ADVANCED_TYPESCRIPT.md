@@ -397,7 +397,7 @@ type ResetableImpl = <T>(f: StateCreator<T, [], []>) => StateCreator<T, [], []>;
 
 const resetableImpl: ResetableImpl = (f) => (set, get, store) => {
   // Add reset method to store
-  (store as any).reset = () => {
+  (store as { reset?: () => void }).reset = () => {
     const initialState = f(set, get, store);
     set(initialState, true);
   };

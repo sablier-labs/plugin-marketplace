@@ -9,7 +9,7 @@ description: Analyze website screenshots and generate detailed implementation sp
 - Target output: !`test -f SPEC.md && echo "SPEC.md exists (will be overwritten)" || echo "Will create new SPEC.md"`
 - Arguments: $ARGUMENTS
 - Thinking mode:
-  !`echo "$ARGUMENTS" | grep -q -i "\-\-deep\|deep" && echo "DEEP (sequential thinking enabled)" || echo "STANDARD (regular analysis)"`
+  !`echo "$ARGUMENTS" | grep -q -i "--deep|deep" && echo "DEEP (sequential thinking enabled)" || echo "STANDARD (regular analysis)"`
 
 ## Your Task
 

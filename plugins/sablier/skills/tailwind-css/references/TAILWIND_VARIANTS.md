@@ -258,9 +258,9 @@ const button = tv({
 type ButtonVariants = VariantProps<typeof button>;
 // { color?: "primary" | "secondary"; size?: "sm" | "md" | "lg" }
 
-interface ButtonProps extends ButtonVariants {
+type ButtonProps = ButtonVariants & {
   children: React.ReactNode;
-}
+};
 ```
 
 ### Required Variants
@@ -270,9 +270,9 @@ Make specific variants required:
 ```typescript
 type ButtonVariants = VariantProps<typeof button>;
 
-interface ButtonProps extends Omit<ButtonVariants, "size">, Required<Pick<ButtonVariants, "size">> {
+type ButtonProps = Omit<ButtonVariants, "size"> & Required<Pick<ButtonVariants, "size">> & {
   children: React.ReactNode;
-}
+};
 ```
 
 ### Type Inference
@@ -418,15 +418,15 @@ tv(options, config);
 
 **Options:**
 
-| Property           | Type                                                               | Description                  |
-| ------------------ | ------------------------------------------------------------------ | ---------------------------- |
-| `base`             | ClassValue                                                         | Base component styles        |
-| `slots`            | Record\<string, ClassValue>                                        | Named style sections         |
-| `variants`         | Record\<string, Record\<string, ClassValue>>                       | Conditional style variants   |
-| `defaultVariants`  | Record\<string, any>                                               | Default variant values       |
-| `compoundVariants` | Array\<{ \[variant\]: value, class: ClassValue }>                  | Multi-condition combinations |
-| `compoundSlots`    | Array\<{ slots: string[], \[variant\]: value, class: ClassValue }> | Multi-slot combinations      |
-| `extend`           | TVReturnType                                                       | Extend another component     |
+| Property           | Type                                                              | Description                  |
+| ------------------ | ----------------------------------------------------------------- | ---------------------------- |
+| `base`             | ClassValue                                                        | Base component styles        |
+| `slots`            | `Record<string, ClassValue>`                                      | Named style sections         |
+| `variants`         | `Record<string, Record<string, ClassValue>>`                      | Conditional style variants   |
+| `defaultVariants`  | `Record<string, string \| boolean>`                               | Default variant values       |
+| `compoundVariants` | `Array<{ [variant]: value, class: ClassValue }>`                  | Multi-condition combinations |
+| `compoundSlots`    | `Array<{ slots: string[], [variant]: value, class: ClassValue }>` | Multi-slot combinations      |
+| `extend`           | TVReturnType                                                      | Extend another component     |
 
 **Config:**
 

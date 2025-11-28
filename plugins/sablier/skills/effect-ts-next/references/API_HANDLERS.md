@@ -200,11 +200,11 @@ const VercelWaitUntil = Layer.succeed(WaitUntil, waitUntil);
 ### Cloudflare Integration
 
 ```typescript
-interface ExecutionContext {
-  waitUntil(promise: Promise<any>): void;
+type ExecutionContext = {
+  waitUntil(promise: Promise<unknown>): void;
   passThroughOnException(): void;
-  props: any;
-}
+  props: Record<string, unknown>;
+};
 
 const CloudflareWaitUntil = (ctx: ExecutionContext) => Layer.succeed(WaitUntil, ctx.waitUntil);
 ```

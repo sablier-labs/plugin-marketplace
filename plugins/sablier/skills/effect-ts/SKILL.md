@@ -119,7 +119,7 @@ Read and internalize `references/CRITICAL_RULES.md` before writing any Effect co
 
 - **FORBIDDEN:** try-catch in Effect.gen
 - **FORBIDDEN:** Type assertions (as never/any/unknown)
-- **MANDATORY:** return yield\* pattern for errors
+- **MANDATORY:** return `yield*` pattern for errors
 
 ## Explaining Solutions
 

@@ -149,7 +149,7 @@ interface UserState {
 ```typescript
 declare module "zustand" {
   interface StoreMutators {
-    // Must use interface for module augmentation
+    // Must use interface for module augmentation with Zustand
   }
 }
 ```

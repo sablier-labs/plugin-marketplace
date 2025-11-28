@@ -59,7 +59,7 @@ const value = something as unknown;
 - Use proper Effect constructors and combinators
 - Adjust function signatures to match usage
 
-## MANDATORY: return yield\* for Errors
+## MANDATORY: return `yield*` for Errors
 
 **Always use `return yield*` when yielding errors or interrupts in Effect.gen.**
 
