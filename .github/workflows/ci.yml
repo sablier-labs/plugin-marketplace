@@ -12,6 +12,8 @@ jobs:
       - uses: actions/checkout@v5
       - uses: extractions/setup-just@v3
       - uses: astral-sh/setup-uv@v7
+        with:
+          python-version: "3.13"
 
       - name: Install mdformat
         run: just install-mdformat
