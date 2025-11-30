@@ -1,0 +1,5 @@
+exclude = [
+  ".serena/**",
+  ".venv/**",
+  "node_modules/**",
+]
