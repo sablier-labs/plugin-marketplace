@@ -12,6 +12,7 @@ General-purpose development tools for TypeScript, React, and Next.js projects.
 
 **Skills:**
 
+- `sablier` — Sablier protocol overview: token vesting, airdrops, and onchain payroll
 - `design` — Sablier dark-theme aesthetic and production-grade React interfaces
 - `effect-ts` — Effect-TS functional programming patterns
 - `effect-ts-next` — Effect-ts + Next.js patterns
