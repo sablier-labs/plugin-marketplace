@@ -13,7 +13,9 @@ General-purpose development tools for TypeScript, React, and Next.js projects.
 **Skills:**
 
 - `design` — Sablier dark-theme aesthetic and production-grade React interfaces
+- `effect-ts` — Effect-TS functional programming patterns
 - `effect-ts-next` — Effect-ts + Next.js patterns
+- `etherscan-api` — Etherscan API V2 for blockchain balance queries
 - `tailwind-v4` — Tailwind CSS v4 rules and tailwind-variants
 - `vitest-v4` — Vitest v4 testing patterns for TypeScript React/Next.js
 - `zustand` — Zustand state management with TypeScript
