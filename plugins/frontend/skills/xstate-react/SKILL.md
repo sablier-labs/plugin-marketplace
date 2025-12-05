@@ -1,6 +1,6 @@
 ---
 name: xstate-react
-description: This skill should be used when the user asks to "create a state machine", "add xState", "use xState with React", "implement actor-based state", "manage complex state with state machines", mentions xState hooks (useMachine, useActor, useSelector), or discusses finite state machines in React applications.
+description: This skill should be used when the user asks to "create a state machine", "add xState", "use xState with React", "implement actor-based state", "manage complex state with state machines", "use xState with Effect", "integrate Effect-ts with xState", mentions xState hooks (useMachine, useActor, useSelector), or discusses finite state machines in React applications.
 ---
 
 # xState React
@@ -376,6 +376,9 @@ Use Context7 MCP with library ID "/statelyai/xstate" to fetch:
 
 **See `references/PATTERNS.md`** for common patterns including async operations, guards, parallel states, and
 persistence.
+
+**See `references/EFFECT_TS_INTEGRATION.md`** for integrating Effect-ts with xState for composable, type-safe side
+effects.
 
 ## Quick Reference
 
