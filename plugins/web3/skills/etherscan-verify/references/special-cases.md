@@ -64,10 +64,10 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
 
 ### Common Path Issues
 
-| Attempted Path | Correct Path |
-|----------------|--------------|
-| `@openzeppelin/contracts/...` | `node_modules/@openzeppelin/contracts/...` |
-| `lib/openzeppelin-contracts/...` | Check actual location in project |
+| Attempted Path                   | Correct Path                               |
+| -------------------------------- | ------------------------------------------ |
+| `@openzeppelin/contracts/...`    | `node_modules/@openzeppelin/contracts/...` |
+| `lib/openzeppelin-contracts/...` | Check actual location in project           |
 
 ## Factory-Created Contracts (CREATE2)
 

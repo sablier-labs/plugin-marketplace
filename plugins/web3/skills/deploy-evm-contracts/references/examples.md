@@ -111,6 +111,7 @@ FOUNDRY_PROFILE=optimized forge script \
 ```
 
 **Output:**
+
 ```
 == Return ==
 merkleInstant: 0xEEd8aBF8D93Df0185d5A683Dff7DC00F656aD61C
@@ -186,10 +187,10 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
 
 ### Comptroller
 
-| Contract           | Address                                      |
-| ------------------ | -------------------------------------------- |
-| Implementation     | `0x53de3a712d2b6657e92fa2452d58a6b823f86920` |
-| Proxy              | `0x0000008ABbFf7a84a2fE09f9A9b74D3BC2072399` |
+| Contract       | Address                                      |
+| -------------- | -------------------------------------------- |
+| Implementation | `0x53de3a712d2b6657e92fa2452d58a6b823f86920` |
+| Proxy          | `0x0000008ABbFf7a84a2fE09f9A9b74D3BC2072399` |
 
 ### Airdrops Factories
 
@@ -202,9 +203,9 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
 
 ### Airdrops Campaigns (Test)
 
-| Contract              | Address                                      |
-| --------------------- | -------------------------------------------- |
-| SablierMerkleInstant  | `0xEEd8aBF8D93Df0185d5A683Dff7DC00F656aD61C` |
-| SablierMerkleLL       | `0x24B114Ce16a6B7A0CE1C1548e2843A97D07FE879` |
-| SablierMerkleLT       | `0x618BC29c7bDAd6e5e86D3cD0c9c31EeA2Ab71d9F` |
-| SablierMerkleVCA      | `0x256cFd4829cf25A61021EAe6AD498E600b28bC4f` |
+| Contract             | Address                                      |
+| -------------------- | -------------------------------------------- |
+| SablierMerkleInstant | `0xEEd8aBF8D93Df0185d5A683Dff7DC00F656aD61C` |
+| SablierMerkleLL      | `0x24B114Ce16a6B7A0CE1C1548e2843A97D07FE879` |
+| SablierMerkleLT      | `0x618BC29c7bDAd6e5e86D3cD0c9c31EeA2Ab71d9F` |
+| SablierMerkleVCA     | `0x256cFd4829cf25A61021EAe6AD498E600b28bC4f` |

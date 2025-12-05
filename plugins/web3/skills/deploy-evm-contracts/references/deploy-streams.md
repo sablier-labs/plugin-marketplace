@@ -55,12 +55,12 @@ FOUNDRY_PROFILE=optimized forge script scripts/Init.s.sol:Init \
 **What Init.s.sol does (Flow):**
 
 1. Approves Flow contract for token spending
-2. Creates 10 streams with rates 0.0000001 → 0.000001 tokens/sec
-3. Deposits 2 tokens into stream #1
-4. Pauses streams #2 and #3
-5. Refunds 0.1 tokens from stream #1
-6. Restarts stream #3 with new rate
-7. Voids stream #7
+1. Creates 10 streams with rates 0.0000001 → 0.000001 tokens/sec
+1. Deposits 2 tokens into stream #1
+1. Pauses streams #2 and #3
+1. Refunds 0.1 tokens from stream #1
+1. Restarts stream #3 with new rate
+1. Voids stream #7
 
 ### Lockup Protocol
 
@@ -93,12 +93,12 @@ Airdrops uses campaign creation scripts instead of Init scripts.
 
 ### Campaign Scripts
 
-| Script                   | Function Signature                                                       | Description            |
-| ------------------------ | ------------------------------------------------------------------------ | ---------------------- |
-| `CreateMerkleInstant.s.sol` | `run(SablierFactoryMerkleInstant factory)`                              | Instant token airdrops |
+| Script                      | Function Signature                                                         | Description            |
+| --------------------------- | -------------------------------------------------------------------------- | ---------------------- |
+| `CreateMerkleInstant.s.sol` | `run(SablierFactoryMerkleInstant factory)`                                 | Instant token airdrops |
 | `CreateMerkleLL.s.sol`      | `run(SablierFactoryMerkleLL factory, ISablierLockup lockup, IERC20 token)` | Linear vesting         |
 | `CreateMerkleLT.s.sol`      | `run(SablierFactoryMerkleLT factory, ISablierLockup lockup, IERC20 token)` | Tranched vesting       |
-| `CreateMerkleVCA.s.sol`     | `run(SablierFactoryMerkleVCA factory)`                                  | VCA vesting            |
+| `CreateMerkleVCA.s.sol`     | `run(SablierFactoryMerkleVCA factory)`                                     | VCA vesting            |
 
 ### Pre-Deployment Configuration
 
@@ -150,12 +150,14 @@ FOUNDRY_PROFILE=optimized forge script scripts/solidity/CreateMerkleLL.s.sol:Cre
 Campaigns are created via factory (CREATE2). Constructor args are embedded in the factory call's `initCode`.
 
 1. **Extract initCode from broadcast**:
+
    ```bash
    jq -r '.transactions[0].transaction.input' \
      broadcast/CreateMerkleInstant.s.sol/<CHAIN_ID>/run-latest.json > /tmp/initcode.txt
    ```
 
-2. **Find constructor args** (after Solidity metadata hash):
+1. **Find constructor args** (after Solidity metadata hash):
+
    ```python
    data = open('/tmp/initcode.txt').read().strip()
    idx = data.find('64736f6c634300081d0033')  # Solidity 0.8.29
@@ -164,7 +166,8 @@ Campaigns are created via factory (CREATE2). Constructor args are embedded in th
        print('0x' + args)
    ```
 
-3. **Verify**:
+1. **Verify**:
+
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
      <CAMPAIGN_ADDRESS> \
@@ -178,12 +181,12 @@ Campaigns are created via factory (CREATE2). Constructor args are embedded in th
 
 ### Campaign Contract Names
 
-| Factory                       | Campaign Contract        |
-| ----------------------------- | ------------------------ |
-| `SablierFactoryMerkleInstant` | `SablierMerkleInstant`   |
-| `SablierFactoryMerkleLL`      | `SablierMerkleLL`        |
-| `SablierFactoryMerkleLT`      | `SablierMerkleLT`        |
-| `SablierFactoryMerkleVCA`     | `SablierMerkleVCA`       |
+| Factory                       | Campaign Contract      |
+| ----------------------------- | ---------------------- |
+| `SablierFactoryMerkleInstant` | `SablierMerkleInstant` |
+| `SablierFactoryMerkleLL`      | `SablierMerkleLL`      |
+| `SablierFactoryMerkleLT`      | `SablierMerkleLT`      |
+| `SablierFactoryMerkleVCA`     | `SablierMerkleVCA`     |
 
 ### Notes
 

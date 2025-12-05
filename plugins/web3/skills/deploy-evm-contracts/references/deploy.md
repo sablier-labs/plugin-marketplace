@@ -189,12 +189,12 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
 Then via Playwright:
 
 1. Navigate to contract page on explorer
-2. Click "Verify & Publish"
-3. Compiler: from `foundry.toml` → `solc` field
-4. License: BUSL-1.1
-5. Method: Standard JSON Input
-6. Upload generated JSON file
-7. Submit
+1. Click "Verify & Publish"
+1. Compiler: from `foundry.toml` → `solc` field
+1. License: BUSL-1.1
+1. Method: Standard JSON Input
+1. Upload generated JSON file
+1. Submit
 
 ## Troubleshooting
 
@@ -203,19 +203,19 @@ Then via Playwright:
 If verification fails with "bytecode does not match":
 
 1. **Check deployment commit** - Find in SDK broadcast JSON or deployment records
-2. **Checkout exact commit**:
+1. **Checkout exact commit**:
    ```bash
    git checkout <DEPLOYMENT_COMMIT>
    ```
-3. **Reinstall dependencies**:
+1. **Reinstall dependencies**:
    ```bash
    bun install
    ```
-4. **Rebuild**:
+1. **Rebuild**:
    ```bash
    FOUNDRY_PROFILE=optimized forge build
    ```
-5. **Retry verification**
+1. **Retry verification**
 
 Root cause: `node_modules` drift from deployment state causes different compilation output.
 
@@ -224,11 +224,13 @@ Root cause: `node_modules` drift from deployment state causes different compilat
 Comptroller uses ERC1967 proxy pattern. Verify **both** contracts:
 
 1. **Find addresses** in broadcast JSON - look for 3 transactions:
+
    - Implementation deployment
    - Proxy deployment
    - Initialize call
 
-2. **Verify implementation**:
+1. **Verify implementation**:
+
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
      <IMPLEMENTATION_ADDRESS> \
@@ -239,7 +241,8 @@ Comptroller uses ERC1967 proxy pattern. Verify **both** contracts:
      --watch
    ```
 
-3. **Verify proxy** (use node_modules path):
+1. **Verify proxy** (use node_modules path):
+
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
      <PROXY_ADDRESS> \
@@ -256,11 +259,13 @@ Comptroller uses ERC1967 proxy pattern. Verify **both** contracts:
 Contracts created via factory (CREATE2) need constructor args extracted from broadcast `initCode`:
 
 1. **Get initCode** from broadcast JSON:
+
    ```bash
    jq -r '.transactions[0].transaction.input' broadcast/<Script>/<CHAIN_ID>/run-latest.json > /tmp/initcode.txt
    ```
 
-2. **Extract constructor args** (Python):
+1. **Extract constructor args** (Python):
+
    ```python
    data = open('/tmp/initcode.txt').read().strip()
    # Find Solidity metadata hash ending (0.8.29 example)
@@ -271,10 +276,12 @@ Contracts created via factory (CREATE2) need constructor args extracted from bro
    ```
 
    Metadata hash pattern: `64736f6c6343` = "solcC" + version bytes + `0033`
+
    - 0.8.29: `64736f6c634300081d0033`
    - 0.8.28: `64736f6c634300081c0033`
 
-3. **Verify with extracted args**:
+1. **Verify with extracted args**:
+
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
      <CONTRACT_ADDRESS> \

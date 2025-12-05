@@ -9,8 +9,8 @@
 ### Diagnosis
 
 1. **Check optimizer settings** - Must match deployment profile
-2. **Check Solidity version** - Must match exactly
-3. **Check dependencies** - `node_modules` may have drifted
+1. **Check Solidity version** - Must match exactly
+1. **Check dependencies** - `node_modules` may have drifted
 
 ### Resolution
 
@@ -80,8 +80,8 @@ Check if chain is supported: https://docs.etherscan.io/supported-chains
 ### Diagnosis
 
 1. Check if contract has constructor parameters
-2. Verify args are ABI-encoded correctly
-3. For factory contracts, extract from `initCode`
+1. Verify args are ABI-encoded correctly
+1. For factory contracts, extract from `initCode`
 
 ### Resolution
 
@@ -172,8 +172,8 @@ forge --version
 **Common Causes:**
 
 1. Wrong source path format
-2. Remappings not applied
-3. OpenZeppelin path variations
+1. Remappings not applied
+1. OpenZeppelin path variations
 
 **Solutions:**
 
@@ -195,14 +195,14 @@ src/libraries/Library.sol:Library
 **Causes:**
 
 1. Explorer queue backed up
-2. Network issues
-3. Invalid submission
+1. Network issues
+1. Invalid submission
 
 **Solutions:**
 
 1. Check explorer directly for status
-2. Try without `--watch` and check manually
-3. Resubmit verification
+1. Try without `--watch` and check manually
+1. Resubmit verification
 
 ```bash
 # Without --watch

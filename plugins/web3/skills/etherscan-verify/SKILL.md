@@ -1,9 +1,6 @@
 ---
 name: etherscan-verify
-description:
-  Verify smart contracts on Etherscan-compatible block explorers. This skill should be used when the user asks to
-  "verify contract", "verify on etherscan", "verify on chain scan". Handles standard verification, Etherscan V2 API for
-  unsupported chains on foundry, proxy patterns, and factory-created contracts.
+description: Verify smart contracts on Etherscan-compatible block explorers. This skill should be used when the user asks to "verify contract", "verify on etherscan", "verify on chain scan". Handles standard verification, Etherscan V2 API for unsupported chains on foundry, proxy patterns, and factory-created contracts.
 version: 0.1.0
 ---
 
