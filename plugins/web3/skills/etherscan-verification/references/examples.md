@@ -37,10 +37,9 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
   --verifier etherscan \
   --verifier-url "https://api.etherscan.io/v2/api?chainid=143" \
   --etherscan-api-key $ETHERSCAN_API_KEY \
-  --constructor-args $(cast abi-encode "constructor(address,address,address)" \
+  --constructor-args $(cast abi-encode "constructor(address,address)" \
     0x0000008ABbFf7a84a2fE09f9A9b74D3BC2072399 \
-    0x619E7f9832522EDeBd883482Cd3d84653A050725 \
-    10000) \
+    0x619E7f9832522EDeBd883482Cd3d84653A050725) \
   --watch
 ```
 
