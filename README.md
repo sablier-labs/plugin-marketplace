@@ -83,6 +83,15 @@ Then, run these commands in a Claude Code chat:
 
 Restart Claude Code, then verify with `/plugin browse` to confirm skills and commands are loaded.
 
+## Updating
+
+There is no CLI command for updating a marketplace (i.e., no `claude plugin update` command exists). See
+[anthropics/claude-code#11676](https://github.com/anthropics/claude-code/issues/11676) for tracking.
+
+In the meantime, use the interactive `/plugin` built-in command to update:
+
+![Updating marketplace with /plugin command](./claude-update.png)
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
