@@ -10,9 +10,37 @@
   "plugins": [
     {
       "name": "sablier",
-      "description": "General-purpose development tools for TypeScript, React, and Next.js projects. Includes skills for Vitest testing, Zustand state management, Tailwind CSS v4, Effect.ts + Next.js patterns, and UI/UX design guidance.",
+      "description": "Sablier protocol context and design guidelines",
       "version": "1.0.0",
       "source": "./plugins/sablier",
+      "category": "domain"
+    },
+    {
+      "name": "fp",
+      "description": "Functional programming patterns with Effect-TS",
+      "version": "1.0.0",
+      "source": "./plugins/fp",
+      "category": "development"
+    },
+    {
+      "name": "frontend",
+      "description": "Frontend development tools: Tailwind CSS, Zustand, UI specs",
+      "version": "1.0.0",
+      "source": "./plugins/frontend",
+      "category": "development"
+    },
+    {
+      "name": "testing",
+      "description": "Testing frameworks and patterns for TypeScript projects",
+      "version": "1.0.0",
+      "source": "./plugins/testing",
+      "category": "development"
+    },
+    {
+      "name": "web3",
+      "description": "Blockchain and Web3 development tools",
+      "version": "1.0.0",
+      "source": "./plugins/web3",
       "category": "development"
     }
   ]
