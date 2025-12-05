@@ -21,8 +21,8 @@ Note that not all directories mentioned above may be present in every plugin.
 Use `mdformat` for Markdown:
 
 ```bash
-mdformat .
-mdformat --check .
+just mdformat-check
+just mdformat-write
 ```
 
 Use Prettier for JSON and YAML:
@@ -31,3 +31,5 @@ Use Prettier for JSON and YAML:
 nlx prettier --write "**/*.{json,jsonc,yaml,yml}"
 nlx prettier --check "**/*.{json,jsonc,yaml,yml}"
 ```
+
+Make sure to run `just full-write` after editing files or generating new ones.
