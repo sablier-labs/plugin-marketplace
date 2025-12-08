@@ -9,6 +9,18 @@ version: 0.1.0
 End-to-end deployment workflow for Sablier EVM contracts. Supports Comptroller, Flow, Lockup, and Airdrops with
 protocol-specific adaptations.
 
+## Prerequisites
+
+### Version Check
+
+Before proceeding, verify Foundry version:
+
+```bash
+forge -V
+```
+
+**Stop if version is below 1.3.6.**
+
 ## Protocol Detection
 
 Detect the current EVM protocol from `package.json`:

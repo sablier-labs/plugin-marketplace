@@ -20,10 +20,21 @@ verification, unsupported chains via Etherscan V2 API, proxy patterns, and facto
 
 | Requirement      | How to Get                                        |
 | ---------------- | ------------------------------------------------- |
+| Foundry ≥1.3.6   | Run `forge -V` to check version                   |
 | Contract address | From deployment broadcast or user                 |
 | Chain ID         | From explorer or network configuration            |
 | Explorer API key | From Etherscan account (works for V2 multi-chain) |
 | Source code      | Must match deployed bytecode exactly              |
+
+### Version Check
+
+Before proceeding, verify Foundry version:
+
+```bash
+forge -V
+```
+
+**Stop if version is below 1.3.6.**
 
 ## Verification Methods
 
