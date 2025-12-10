@@ -1,6 +1,11 @@
 ---
 name: effect-ts
-description: This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X with effect", "effect pattern for", "refactor to effect", "convert to effect", "effect service", "effect layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Covers writing, refactoring, debugging, testing, or reviewing any code using the Effect library.
+description: >-
+  This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or
+  "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X
+  with effect", "effect pattern for", "refactor to effect", "convert to effect", "effect service", "effect
+  layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Covers
+  writing, refactoring, debugging, testing, or reviewing any code using the Effect library.
 ---
 
 # Effect-TS Expert
@@ -115,11 +120,11 @@ Apply these core principles when writing Effect code:
 
 ## Critical Rules
 
-Read and internalize `references/CRITICAL_RULES.md` before writing any Effect code. These rules are non-negotiable:
+Read and internalize `references/CRITICAL_RULES.md` before writing any Effect code. Key guidelines:
 
-- **FORBIDDEN:** try-catch in Effect.gen
-- **FORBIDDEN:** Type assertions (as never/any/unknown)
-- **MANDATORY:** return `yield*` pattern for errors
+- **INEFFECTIVE:** try-catch in Effect.gen (Effect failures aren't thrown)
+- **AVOID:** Type assertions (as never/any/unknown)
+- **RECOMMENDED:** `return yield*` pattern for errors (makes termination explicit)
 
 ## Explaining Solutions
 
@@ -145,13 +150,25 @@ Effect.sync(fn)                 // Wrap synchronous non-throwing function
 Effect.flatMap(effect, fn)      // Chain effects
 Effect.map(effect, fn)          // Transform success value
 Effect.tap(effect, fn)          // Side effect without changing value
-Effect.all([...effects])        // Run effects in parallel
+Effect.all([...effects])        // Run effects (concurrency configurable)
 Effect.forEach(items, fn)       // Map over items with effects
 ```
 
 ### Error Handling
 
 ```typescript
+// Define typed errors with Data.TaggedError (preferred)
+class UserNotFoundError extends Data.TaggedError("UserNotFoundError")<{
+  userId: string
+}> {}
+
+// Direct yield of errors (no Effect.fail wrapper needed)
+Effect.gen(function* () {
+  if (!user) {
+    return yield* new UserNotFoundError({ userId })
+  }
+})
+
 Effect.catchTag(effect, tag, fn) // Handle specific error tag
 Effect.catchAll(effect, fn)      // Handle all errors
 Effect.result(effect)            // Convert to Exit value
@@ -169,10 +186,21 @@ Effect.provide(effect, MyServiceLive)
 // Pattern 2: Effect.Service (default implementation bundled)
 class UserRepo extends Effect.Service<UserRepo>()("UserRepo", {
   effect: Effect.gen(function* () {
-    return { findAll: Effect.succeed([]) }
-  })
+    const db = yield* Database
+    return { findAll: db.query("SELECT * FROM users") }
+  }),
+  dependencies: [Database.Default],  // Optional service dependencies
+  accessors: true                     // Auto-generate method accessors
 }) {}
 Effect.provide(effect, UserRepo.Default)  // .Default layer auto-generated
+// Use UserRepo.DefaultWithoutDependencies when deps provided separately
+
+// Pattern 3: Context.Reference (defaultable tags - 3.11.0+)
+class SpecialNumber extends Context.Reference<SpecialNumber>()(
+  "SpecialNumber",
+  { defaultValue: () => 2048 }
+) {}
+// No Layer required if default value suffices
 ```
 
 ### Generator Pattern
@@ -186,6 +214,13 @@ Effect.gen(function* () {
   }
   return result;
 });
+
+// Effect.fn - automatic tracing and telemetry (preferred for named functions)
+const fetchUser = Effect.fn("fetchUser")(function* (id: string) {
+  const db = yield* Database
+  return yield* db.query(id)
+})
+// Creates spans, captures call sites, provides better stack traces
 ```
 
 ### Resource Management

@@ -1,22 +1,24 @@
 # Critical Rules for Effect-TS
 
-These rules are **non-negotiable**. Violations will cause runtime errors or break Effect's type safety.
+These rules address common mistakes when working with Effect. Understanding why they matter helps write idiomatic Effect
+code.
 
-## FORBIDDEN: try-catch in Effect.gen
+## INEFFECTIVE: try-catch in Effect.gen
 
-**Never use `try-catch` blocks inside `Effect.gen` generators.**
+**Avoid `try-catch` blocks inside `Effect.gen` generators for handling Effect failures.**
 
-Effect generators handle errors through the Effect type system, not JavaScript exceptions. Using try-catch will cause
-runtime errors and break Effect's error handling.
+Effect failures are returned as exits, not thrown as JavaScript exceptions. Using try-catch will not catch Effect
+failures—it only catches synchronous throws from non-Effect code.
 
-**Wrong:**
+**Problematic:**
 
 ```typescript
 Effect.gen(function* () {
   try {
     const result = yield* someEffect;
   } catch (error) {
-    // This will never be reached and breaks Effect semantics
+    // This catches synchronous throws only, NOT Effect failures
+    // Effect failures bypass this entirely
   }
 });
 ```
@@ -38,13 +40,13 @@ Alternative patterns:
 - `Effect.result` to inspect success/failure
 - `Effect.tryPromise` / `Effect.try` for wrapping external code
 
-## FORBIDDEN: Type Assertions
+## AVOID: Type Assertions
 
-**Never use `as never`, `as any`, or `as unknown` type assertions.**
+**Avoid `as never`, `as any`, or `as unknown` type assertions.**
 
-These break TypeScript's type safety and hide real type errors. Always fix the underlying type issues.
+These break TypeScript's type safety and hide real type errors. Always fix the underlying type issues instead.
 
-**Forbidden patterns:**
+**Patterns to avoid:**
 
 ```typescript
 const value = something as any;
@@ -59,13 +61,17 @@ const value = something as unknown;
 - Use proper Effect constructors and combinators
 - Adjust function signatures to match usage
 
-## MANDATORY: return `yield*` for Errors
+Note: This is general TypeScript guidance. Occasional assertions may be justified when interfacing with poorly-typed
+external libraries, but document the reason.
 
-**Always use `return yield*` when yielding errors or interrupts in Effect.gen.**
+## RECOMMENDED: return `yield*` for Errors
 
-This makes it clear that the generator function terminates at that point.
+**Use `return yield*` when yielding errors or interrupts in Effect.gen for clarity.**
 
-**Correct:**
+The runtime halts on failed yields regardless of `return`, but the explicit `return` makes termination obvious and
+prevents unreachable-code warnings.
+
+**Recommended:**
 
 ```typescript
 Effect.gen(function* () {
@@ -82,15 +88,15 @@ Effect.gen(function* () {
 });
 ```
 
-**Wrong:**
+**Acceptable but less clear:**
 
 ```typescript
 Effect.gen(function* () {
   if (someCondition) {
     yield* Effect.fail("error message");
-    // Unreachable code after error - confusing and error-prone
+    // Runtime halts here, but looks like code might continue
   }
 });
 ```
 
-The `return` keyword makes termination explicit and prevents unreachable code.
+The `return` keyword makes termination explicit and improves code readability.
