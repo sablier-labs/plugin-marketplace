@@ -18,9 +18,10 @@ composability, and testing patterns.
 Before starting any Effect-related work, verify the required local resources exist:
 
 ```
-~/.effect/effect     → Effect-TS source code repository
-~/.effect/examples   → Effect usage examples in Markdown
-~/.effect/guide      → Effect guides and documentation
+~/.effect/effect      → Effect-TS source code repository
+~/.effect/examples    → Effect usage examples in Markdown
+~/.effect/guide       → Effect guides and documentation
+~/.effect/effect-atom → Effect-Atom reactive state library (optional, for React state management)
 ```
 
 **If any directory is missing, stop immediately and inform the user.** These directories are required for accurate
@@ -333,3 +334,4 @@ const validPort = Config.number("PORT").pipe(
 ### Reference Files
 
 - **`references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions
+- **`references/EFFECT_ATOM.md`** — Effect-Atom reactive state management for React
