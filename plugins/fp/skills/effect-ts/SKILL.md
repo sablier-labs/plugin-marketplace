@@ -231,6 +231,24 @@ Effect.scoped(effect)                            // Scope lifetime to effect
 Effect.addFinalizer(cleanup)                     // Register cleanup action
 ```
 
+### Duration
+
+Effect accepts human-readable duration strings anywhere a `DurationInput` is expected:
+
+```typescript
+// String syntax (preferred) - singular or plural forms work
+Duration.toMillis("5 minutes")    // 300000
+Duration.toMillis("1 minute")     // 60000
+Duration.toMillis("30 seconds")   // 30000
+Duration.toMillis("100 millis")   // 100
+
+// Verbose syntax (avoid)
+Duration.toMillis(Duration.minutes(5))  // Same result, more verbose
+
+// Common units: millis, seconds, minutes, hours, days, weeks
+// Also: nanos, micros
+```
+
 ### Scheduling
 
 ```typescript
