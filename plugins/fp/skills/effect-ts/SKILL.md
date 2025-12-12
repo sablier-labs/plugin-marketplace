@@ -4,8 +4,12 @@ description: >-
   This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or
   "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X
   with effect", "effect pattern for", "refactor to effect", "convert to effect", "effect service", "effect
-  layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Covers
-  writing, refactoring, debugging, testing, or reviewing any code using the Effect library.
+  layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Also
+  covers Effect + Next.js integration when the user asks to "use Effect with Next.js", "create Effect
+  server actions", "add Effect middleware to Next.js", "integrate Effect runtime in App Router", "build
+  API routes with Effect", "create HttpApi handlers", "use @effect/platform in Next.js", mentions
+  @mcrovero/effect-nextjs or @effect/platform HttpApi. Covers writing, refactoring, debugging, testing, or
+  reviewing any code using the Effect library.
 ---
 
 # Effect-TS Expert
@@ -335,3 +339,5 @@ const validPort = Config.number("PORT").pipe(
 
 - **`references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions
 - **`references/EFFECT_ATOM.md`** — Effect-Atom reactive state management for React
+- **`references/NEXT_JS.md`** — Effect + Next.js 15+ App Router integration patterns
+- **`references/TESTING.md`** — Vitest deterministic testing patterns
