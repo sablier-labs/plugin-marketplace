@@ -56,6 +56,7 @@ Blockchain and Web3 development tools.
 **Skills:**
 
 - `etherscan-api` — Etherscan API V2 for blockchain balance queries
+- `viem` — Viem TypeScript interface for Ethereum interactions
 
 ## Installation
 
