@@ -4,7 +4,8 @@ description: >-
   This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or
   "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X
   with effect", "effect pattern for", "refactor to effect", "convert to effect", "effect service", "effect
-  layer", "effect dependency injection", or when reading/writing code that imports from 'effect'. Also
+  layer", "effect dependency injection", "SubscriptionRef", "Match.value", "Match.type", "error taxonomy",
+  "Option vs null", "Duration string", or when reading/writing code that imports from 'effect'. Also
   covers Effect + Next.js integration when the user asks to "use Effect with Next.js", "create Effect
   server actions", "add Effect middleware to Next.js", "integrate Effect runtime in App Router", "build
   API routes with Effect", "create HttpApi handlers", "use @effect/platform in Next.js", mentions
@@ -131,6 +132,15 @@ Read and internalize `references/CRITICAL_RULES.md` before writing any Effect co
 - **AVOID:** Type assertions (as never/any/unknown)
 - **RECOMMENDED:** `return yield*` pattern for errors (makes termination explicit)
 
+## Common Failure Modes
+
+Quick links to patterns that frequently cause issues:
+
+- **SubscriptionRef version mismatch** — `unsafeMake is not a function` → [Quick Reference](#subscriptionref-reactive-references)
+- **Cancellation vs Failure** — Interrupts aren't errors → [Error Taxonomy](#error-taxonomy)
+- **Option vs null** — Use Option internally, null at boundaries → [OPTION_NULL.md](references/OPTION_NULL.md)
+- **Stream backpressure** — Infinite streams hang → [STREAMS.md](references/STREAMS.md)
+
 ## Explaining Solutions
 
 When providing solutions, explain the Effect-TS concepts being used and why they're appropriate for the specific use
@@ -157,6 +167,12 @@ Effect.map(effect, fn)          // Transform success value
 Effect.tap(effect, fn)          // Side effect without changing value
 Effect.all([...effects])        // Run effects (concurrency configurable)
 Effect.forEach(items, fn)       // Map over items with effects
+
+// Collect ALL errors (not just first)
+Effect.all([e1, e2, e3], { mode: "validate" })  // Returns all failures
+
+// Partial success handling
+Effect.partition([e1, e2, e3])  // Returns [failures, successes]
 ```
 
 ### Error Handling
@@ -178,6 +194,66 @@ Effect.catchTag(effect, tag, fn) // Handle specific error tag
 Effect.catchAll(effect, fn)      // Handle all errors
 Effect.result(effect)            // Convert to Exit value
 Effect.orElse(effect, alt)       // Fallback effect
+```
+
+### Error Taxonomy
+
+Categorize errors for appropriate handling:
+
+| Category                | Examples                   | Handling                  |
+| ----------------------- | -------------------------- | ------------------------- |
+| **Expected Rejections** | User cancel, deny          | Graceful exit, no retry   |
+| **Domain Errors**       | Validation, business rules | Show to user, don't retry |
+| **Defects**             | Bugs, assertions           | Log + alert, investigate  |
+| **Interruptions**       | Fiber cancel, timeout      | Cleanup, may retry        |
+| **Unknown/Foreign**     | Thrown exceptions          | Normalize at boundary     |
+
+```typescript
+// Pattern: Normalize unknown errors at boundary
+const safeBoundary = Effect.catchAllDefect(effect, (defect) =>
+  Effect.fail(new UnknownError({ cause: defect }))
+)
+
+// Pattern: Catch user-initiated cancellations separately
+Effect.catchTag(effect, "UserCancelledError", () => Effect.succeed(null))
+
+// Pattern: Handle interruptions differently from failures
+Effect.onInterrupt(effect, () => Effect.log("Operation cancelled"))
+```
+
+### Pattern Matching (Match Module)
+
+**Default branching tool for tagged unions and complex conditionals.**
+
+```typescript
+import { Match } from "effect"
+
+// Type-safe exhaustive matching on tagged errors
+const handleError = Match.type<AppError>().pipe(
+  Match.tag("UserCancelledError", () => null),          // Expected rejection
+  Match.tag("ValidationError", (e) => e.message),       // Domain error
+  Match.tag("NetworkError", () => "Connection failed"), // Retryable
+  Match.exhaustive  // Compile error if case missing
+)
+
+// Replace nested catchTag chains
+// BEFORE: effect.pipe(catchTag("A", ...), catchTag("B", ...), catchTag("C", ...))
+// AFTER:
+Effect.catchAll(effect, (error) =>
+  Match.value(error).pipe(
+    Match.tag("A", handleA),
+    Match.tag("B", handleB),
+    Match.tag("C", handleC),
+    Match.exhaustive
+  )
+)
+
+// Match on values (cleaner than if/else)
+const describe = Match.value(status).pipe(
+  Match.when("pending", () => "Loading..."),
+  Match.when("success", () => "Done!"),
+  Match.orElse(() => "Unknown")
+)
 ```
 
 ### Services and Layers
@@ -271,6 +347,23 @@ Ref.set(ref, value)          // Write value
 Deferred.make<E, A>()        // One-time async value
 ```
 
+### SubscriptionRef (Reactive References)
+
+```typescript
+// WARNING: Never use unsafeMake - it may not exist in your Effect version.
+// If you see "unsafeMake is not a function", use the safe API below.
+
+SubscriptionRef.make(initial)      // Create reactive reference (safe)
+SubscriptionRef.get(ref)           // Read current value
+SubscriptionRef.set(ref, value)    // Update value (notifies subscribers)
+SubscriptionRef.changes(ref)       // Stream of value changes
+
+// React integration (effect-atom pattern)
+const ref = yield* SubscriptionRef.make<User | null>(null)
+// Hook reads: useSubscriptionRef(ref) — returns current value or null
+// Handle null explicitly in components
+```
+
 ### Concurrency
 
 ```typescript
@@ -327,6 +420,30 @@ const validPort = Config.number("PORT").pipe(
 )
 ```
 
+### Array Operations
+
+```typescript
+import { Array as Arr, Order } from "effect"
+
+// Sorting with built-in orderings (accepts any Iterable)
+Arr.sort([3, 1, 2], Order.number)              // [1, 2, 3]
+Arr.sort(["b", "a", "c"], Order.string)        // ["a", "b", "c"]
+Arr.sort(new Set([3n, 1n, 2n]), Order.bigint)  // [1n, 2n, 3n]
+
+// Sort by derived value
+Arr.sortWith(users, (u) => u.age, Order.number)
+
+// Sort by multiple criteria
+Arr.sortBy(
+  users,
+  Order.mapInput(Order.number, (u: User) => u.age),
+  Order.mapInput(Order.string, (u: User) => u.name)
+)
+
+// Built-in orderings: Order.string, Order.number, Order.bigint, Order.boolean, Order.Date
+// Reverse ordering: Order.reverse(Order.number)
+```
+
 ### Utility Functions
 
 ```typescript
@@ -354,4 +471,6 @@ eventEmitter.on("event", noop)        // Register empty handler
 - **`references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions
 - **`references/EFFECT_ATOM.md`** — Effect-Atom reactive state management for React
 - **`references/NEXT_JS.md`** — Effect + Next.js 15+ App Router integration patterns
+- **`references/OPTION_NULL.md`** — Option vs null boundary patterns
+- **`references/STREAMS.md`** — Stream patterns and backpressure gotchas
 - **`references/TESTING.md`** — Vitest deterministic testing patterns

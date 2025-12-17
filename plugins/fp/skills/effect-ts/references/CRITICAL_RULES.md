@@ -100,3 +100,14 @@ Effect.gen(function* () {
 ```
 
 The `return` keyword makes termination explicit and improves code readability.
+
+## Null vs Option<T> Rule
+
+**Use `Option<T>` internally, `T | null` at boundaries.**
+
+- Internal Effect computations → `Option<T>`
+- React state/props → `T | null`
+- JSON serialization → `T | null` or `T | undefined`
+- External API responses → normalize to `Option<T>` at boundary
+
+See `OPTION_NULL.md` for comprehensive patterns.
