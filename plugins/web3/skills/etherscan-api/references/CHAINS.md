@@ -1,14 +1,6 @@
 # Etherscan Supported Chains Reference
 
-## Dynamic Chain List Endpoint
-
-Etherscan provides a `/v2/chainlist` endpoint to fetch the current list of all supported chains:
-
-```bash
-curl -s "https://api.etherscan.io/v2/api?chainid=1&module=proxy&action=chainlist&apikey=$ETHERSCAN_API_KEY"
-```
-
-Use this endpoint to get the most up-to-date chain support information.
+Source: <https://docs.etherscan.io/etherscan-v2/getting-started/supported-chains>
 
 ## Major Mainnets (Free Tier Available)
 
@@ -54,6 +46,7 @@ The following chains require a paid Etherscan plan:
 | opBNB            | `204`    |
 | Sei              | `1329`   |
 | Sonic            | `146`    |
+| Stable           | `988`    |
 | Swellchain       | `1923`   |
 | Taiko            | `167000` |
 | Unichain         | `130`    |
@@ -70,18 +63,27 @@ The following chains require a paid Etherscan plan:
 | Abstract Sepolia   | `11124`     |
 | ApeChain Curtis    | `33111`     |
 | Arbitrum Sepolia   | `421614`    |
+| Avalanche Fuji     | `43113`     |
+| Base Sepolia       | `84532`     |
 | Berachain Bepolia  | `80069`     |
 | BitTorrent Testnet | `1029`      |
 | Blast Sepolia      | `168587773` |
+| BNB Testnet        | `97`        |
 | Celo Sepolia       | `11142220`  |
 | Fraxtal Hoodi      | `2523`      |
+| Katana Bokuto      | `737373`    |
 | Linea Sepolia      | `59141`     |
 | Mantle Sepolia     | `5003`      |
+| Memecore Testnet   | `43521`     |
+| Monad Testnet      | `10143`     |
 | Moonbase Alpha     | `1287`      |
+| OP Sepolia         | `11155420`  |
+| opBNB Testnet      | `5611`      |
 | Polygon Amoy       | `80002`     |
 | Scroll Sepolia     | `534351`    |
 | Sei Testnet        | `1328`      |
 | Sonic Testnet      | `14601`     |
+| Stable Testnet     | `2201`      |
 | Swellchain Testnet | `1924`      |
 | Taiko Hoodi        | `167013`    |
 | Unichain Sepolia   | `1301`      |

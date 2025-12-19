@@ -31,6 +31,39 @@ fi
 
 If the environment variable is missing, inform the user and halt execution.
 
+## Chain Inference
+
+Do not default to Ethereum Mainnet. Always infer the chain from the user's prompt before making any API call.
+
+### Inference Rules
+
+1. **Explicit chain mention** — If the user mentions a chain name (e.g., "on Polygon", "Arbitrum balance", "Base chain"), use that chain.
+1. **Chain-specific tokens** — Some tokens exist primarily on specific chains:
+   - POL → Polygon (137)
+   - ARB → Arbitrum One (42161)
+   - OP → OP Mainnet (10)
+   - AVAX → Avalanche C-Chain (43114)
+   - BNB → BNB Smart Chain (56)
+   - SONIC → Sonic (146)
+   - SEI → Sei (1329)
+   - MON → Monad (143)
+1. **Contract address patterns** — If the user provides a contract address, consider asking which chain it's deployed on (many contracts exist on multiple chains).
+1. **Testnet keywords** — Words like "testnet", "Sepolia", "Holesky", "Amoy" indicate testnet chains.
+1. **Ambiguous cases** — If the chain cannot be inferred, **ask the user** before proceeding. Do not assume Ethereum Mainnet.
+
+### Unsupported Chains
+
+If the user references a chain not supported by Etherscan (e.g., Solana, Bitcoin), inform them:
+
+```
+The chain "[chain name]" is not supported by Etherscan API V2.
+
+Etherscan supports EVM-compatible chains only. For the full list, see:
+https://docs.etherscan.io/etherscan-v2/getting-started/supported-chains
+```
+
+For the complete list of supported chains and their IDs, see `references/CHAINS.md`.
+
 ## API Base URL
 
 All requests use the unified V2 endpoint:
