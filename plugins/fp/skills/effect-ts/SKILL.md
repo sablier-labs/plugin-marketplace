@@ -1,5 +1,5 @@
 ---
-name: effect-ts
+name: Effect-TS
 description: >-
   This skill should be used when the user asks ANY question about Effect-TS patterns, refactoring, or
   "better ways" to do things with Effect. Trigger phrases include "better way with effect", "how to do X

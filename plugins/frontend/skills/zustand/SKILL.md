@@ -1,5 +1,5 @@
 ---
-name: zustand
+name: Zustand
 description: This skill should be used when the user asks to "create a Zustand store", "add Zustand", "manage global state with Zustand", "use Zustand with TypeScript", "add state management", or mentions Zustand stores, selectors, or middleware. Provides TypeScript-first state management guidance for Next.js projects.
 ---
 

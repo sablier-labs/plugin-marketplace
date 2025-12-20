@@ -1,5 +1,5 @@
 ---
-name: tailwind-v4
+name: Tailwind v4
 description: This skill should be used when the user asks about "Tailwind CSS", "tailwind-variants", "tv() function", "CSS-first configuration", "Tailwind breaking changes", mentions styling with Tailwind utilities, gradient syntax, or component variants with TypeScript.
 ---
 

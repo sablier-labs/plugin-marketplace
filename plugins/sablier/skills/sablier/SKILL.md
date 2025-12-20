@@ -1,5 +1,5 @@
 ---
-name: sablier
+name: Sablier
 description: This skill should be used when the user asks "what is Sablier", "explain Sablier protocol", "how does Sablier work", "Sablier vesting", "Sablier airdrops", "Sablier payroll", mentions Sablier company/product/protocol, or needs context about the Sablier ecosystem.
 ---
 

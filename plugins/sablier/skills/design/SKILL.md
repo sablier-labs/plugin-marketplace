@@ -1,5 +1,5 @@
 ---
-name: sablier-design
+name: Sablier Design
 description: Create distinctive, production-grade React interfaces aligned with Sablier's dark-theme aesthetic. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that leverages the Sablier theme.
 ---
 
