@@ -55,6 +55,7 @@ Blockchain and Web3 development tools.
 
 **Skills:**
 
+- `coingecko-api` — CoinGecko API for token metadata and logo retrieval
 - `etherscan-api` — Etherscan API V2 for blockchain balance queries
 - `viem` — Viem TypeScript interface for Ethereum interactions
 
