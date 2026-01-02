@@ -1,5 +1,5 @@
 ---
-name: Effect-TS
+name: effect-ts
 description: This skill should be used when the user asks about Effect-TS patterns, services, layers, error handling, service composition, or writing/refactoring code that imports from 'effect'. Also covers Effect + Next.js integration with @prb/effect-next.
 ---
 

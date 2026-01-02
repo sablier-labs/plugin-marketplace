@@ -1,5 +1,5 @@
 ---
-name: Vitest v4
+name: vitest-v4
 description: This skill should be used when the user asks to "write tests", "add tests", "test coverage", "run tests", "debug failing tests", "mock functions", or mentions Vitest, unit tests, component tests, test-driven development, or testing utilities. Provides comprehensive Vitest v4 guidance for TypeScript React/Next.js projects.
 ---
 
