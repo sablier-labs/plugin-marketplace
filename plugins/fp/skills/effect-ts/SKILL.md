@@ -266,12 +266,24 @@ class UserRepo extends Effect.Service<UserRepo>()("UserRepo", {
 Effect.provide(effect, UserRepo.Default)  // .Default layer auto-generated
 // Use UserRepo.DefaultWithoutDependencies when deps provided separately
 
+// Effect.Service with parameters (3.16.0+)
+class ConfiguredApi extends Effect.Service<ConfiguredApi>()("ConfiguredApi", {
+  effect: (config: { baseUrl: string }) =>
+    Effect.succeed({ fetch: (path: string) => `${config.baseUrl}/${path}` })
+}) {}
+
 // Pattern 3: Context.Reference (defaultable tags - 3.11.0+)
 class SpecialNumber extends Context.Reference<SpecialNumber>()(
   "SpecialNumber",
   { defaultValue: () => 2048 }
 ) {}
 // No Layer required if default value suffices
+
+// Pattern 4: Context.ReadonlyTag (covariant - 3.18.0+)
+// Use for functions that consume services without modifying the type
+function effectHandler<I, A, E, R>(service: Context.ReadonlyTag<I, Effect.Effect<A, E, R>>) {
+  // Handler can use service in a covariant position
+}
 ```
 
 ### Generator Pattern
@@ -447,6 +459,12 @@ Effect.tap(effect, noop)              // Ignore value, just run effect
 Promise.catch(noop)                   // Swallow errors
 eventEmitter.on("event", noop)        // Register empty handler
 ```
+
+### Deprecations
+
+- **`BigDecimal.fromNumber`** — Use `BigDecimal.unsafeFromNumber` instead (3.11.0+)
+- **`Schema.annotations()`** — Now removes previously set identifier annotations; identifiers are tied to the schema's
+  `ast` reference only (3.17.10)
 
 ## Additional Resources
 
