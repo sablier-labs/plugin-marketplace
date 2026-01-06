@@ -3,3 +3,7 @@ node_modules/
 
 # files
 .DS_Store
+
+# writing plugin cache (auto-synced docs)
+plugins/writing/cache/*
+!plugins/writing/cache/.gitkeep
