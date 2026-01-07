@@ -11,10 +11,10 @@ should provide genuine value—not just product pitches.
 ## Before Writing
 
 1. **Read** `references/BRAND_VOICE.md` — Sablier's voice and style
-2. **Read** `references/COMPANY_PROFILE.md` — products, metrics, positioning
-3. **Read** `references/ICP.md` — who we're writing for
-4. **Reference** `references/VOICE_EXAMPLES.md` — past posts for consistency
-5. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
+1. **Read** `references/COMPANY_PROFILE.md` — products, metrics, positioning
+1. **Read** `references/ICP.md` — who we're writing for
+1. **Reference** `references/VOICE_EXAMPLES.md` — past posts for consistency
+1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Post Types
 
@@ -330,12 +330,12 @@ Before publishing:
 ## Common Mistakes to Avoid
 
 1. **Burying the lede**: Put the main point early
-2. **Feature lists without benefits**: Always say "so what"
-3. **Vague claims**: Use specific numbers and examples
-4. **Wall of text**: Break it up with formatting
-5. **Hard sell**: Educate first, position product second
-6. **Hype language**: Let substance do the work
-7. **Forgetting the CTA**: End with clear next steps
+1. **Feature lists without benefits**: Always say "so what"
+1. **Vague claims**: Use specific numbers and examples
+1. **Wall of text**: Break it up with formatting
+1. **Hard sell**: Educate first, position product second
+1. **Hype language**: Let substance do the work
+1. **Forgetting the CTA**: End with clear next steps
 
 ## Post Metadata Template
 

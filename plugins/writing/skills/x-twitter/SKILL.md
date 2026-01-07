@@ -11,9 +11,9 @@ than hype.
 ## Before Writing
 
 1. **Read** `references/BRAND_VOICE.md` — understand Sablier's voice
-2. **Read** `references/COMPANY_PROFILE.md` — know our products, metrics, differentiators
-3. **Read** `references/ICP.md` — understand who we're talking to
-4. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
+1. **Read** `references/COMPANY_PROFILE.md` — know our products, metrics, differentiators
+1. **Read** `references/ICP.md` — understand who we're talking to
+1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Post Types
 

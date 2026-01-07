@@ -2,18 +2,18 @@
 
 ## Company Info
 
-| Field         | Value                                    |
-| ------------- | ---------------------------------------- |
-| Name          | Sablier Labs                             |
-| Founded       | 2019                                     |
-| Headquarters  | Remote (UK, Romania, Canada)             |
-| Team size     | ~7 (as of late 2024)                     |
-| Website       | https://sablier.com                      |
-| App           | https://app.sablier.com                  |
-| Twitter       | https://twitter.com/Sablier              |
-| GitHub        | https://github.com/sablier-labs          |
-| Discord       | https://discord.sablier.com              |
-| Farcaster     | @sablier                                 |
+| Field        | Value                           |
+| ------------ | ------------------------------- |
+| Name         | Sablier Labs                    |
+| Founded      | 2019                            |
+| Headquarters | Remote (UK, Romania, Canada)    |
+| Team size    | ~7 (as of late 2024)            |
+| Website      | https://sablier.com             |
+| App          | https://app.sablier.com         |
+| Twitter      | https://twitter.com/Sablier     |
+| GitHub       | https://github.com/sablier-labs |
+| Discord      | https://discord.sablier.com     |
+| Farcaster    | @sablier                        |
 
 ## Funding
 
@@ -34,13 +34,13 @@
 
 ## Metrics
 
-| Metric               | Value                              |
-| -------------------- | ---------------------------------- |
-| Streams created      | 125,000+                           |
-| All-time users       | 85,000+                            |
-| Monthly active users | ~25,000                            |
-| TVL                  | $200M+ median monthly (2021-2024)  |
-| Security record      | 5+ years without any hacks         |
+| Metric               | Value                               |
+| -------------------- | ----------------------------------- |
+| Streams created      | 125,000+                            |
+| All-time users       | 85,000+                             |
+| Monthly active users | ~25,000                             |
+| TVL                  | $200M+ median monthly (2021-2024)   |
+| Security record      | 5+ years without any hacks          |
 | Uptime               | Running continuously since Dec 2019 |
 
 ## Products
@@ -111,11 +111,11 @@ IoTeX, LightLink (27+ total)
 
 **Model**: Low UI fees on withdrawals and claims
 
-| Action                | Fee                         |
-| --------------------- | --------------------------- |
-| Withdraw from stream  | ~$1 in chain token          |
-| Claim airdrop         | ~$2 in chain token          |
-| Custom services       | Contact for quote           |
+| Action               | Fee                |
+| -------------------- | ------------------ |
+| Withdraw from stream | ~$1 in chain token |
+| Claim airdrop        | ~$2 in chain token |
+| Custom services      | Contact for quote  |
 
 **Who pays**: User triggering the transaction (senders can cover for recipients on request)
 
@@ -194,16 +194,16 @@ Salad, Weave, Parifi, TokenOps, Arcadia, EARN'M, Rook Labs, ECF (Ethereum Commun
 
 ## Milestones
 
-| Year | Event                                         |
-| ---- | --------------------------------------------- |
-| 2019 | Sablier V1 launched on Ethereum mainnet       |
-| 2019 | MakerDAO grant received                       |
-| 2021 | Expanded to Polygon and BSC                   |
-| 2022 | Expanded to Optimism, Arbitrum, Avalanche     |
-| 2022 | Pre-seed funding ($500K)                      |
-| 2023 | Sablier V2 launched with NFT streams          |
-| 2023 | Airstreams product launched                   |
-| 2024 | Seed funding ($4.5M)                          |
-| 2024 | a16z CSX participation                        |
-| 2024 | Sablier Flow launched                         |
-| 2025 | Solana launch                                 |
+| Year | Event                                     |
+| ---- | ----------------------------------------- |
+| 2019 | Sablier V1 launched on Ethereum mainnet   |
+| 2019 | MakerDAO grant received                   |
+| 2021 | Expanded to Polygon and BSC               |
+| 2022 | Expanded to Optimism, Arbitrum, Avalanche |
+| 2022 | Pre-seed funding ($500K)                  |
+| 2023 | Sablier V2 launched with NFT streams      |
+| 2023 | Airstreams product launched               |
+| 2024 | Seed funding ($4.5M)                      |
+| 2024 | a16z CSX participation                    |
+| 2024 | Sablier Flow launched                     |
+| 2025 | Solana launch                             |

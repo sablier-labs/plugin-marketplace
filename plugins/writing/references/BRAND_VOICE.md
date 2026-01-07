@@ -19,12 +19,12 @@
 
 ### Tone Spectrum
 
-| Dimension            | Our Position                                          |
-| -------------------- | ----------------------------------------------------- |
-| Formal ↔ Casual      | Professional-leaning—not stiff, but not casual either |
-| Serious ↔ Playful    | Serious about the work, occasional light moments      |
-| Technical ↔ Simple   | Technical accuracy, simple explanations               |
-| Confident ↔ Humble   | Confident in our position, humble about being fallible |
+| Dimension          | Our Position                                           |
+| ------------------ | ------------------------------------------------------ |
+| Formal ↔ Casual    | Professional-leaning—not stiff, but not casual either  |
+| Serious ↔ Playful  | Serious about the work, occasional light moments       |
+| Technical ↔ Simple | Technical accuracy, simple explanations                |
+| Confident ↔ Humble | Confident in our position, humble about being fallible |
 
 ## Communication Style
 
@@ -48,13 +48,13 @@
 
 ### Preferred Terms
 
-| Category       | Terms                                               |
-| -------------- | --------------------------------------------------- |
-| Our concept    | money streaming, token streaming                    |
-| Our products   | Sablier Lockup, Sablier Flow, Airstreams            |
-| Users          | recipients, senders, stream creators                |
-| Actions        | stream, vest, distribute, claim, withdraw           |
-| Our strength   | battle-tested, decentralized, immutable, audited    |
+| Category     | Terms                                            |
+| ------------ | ------------------------------------------------ |
+| Our concept  | money streaming, token streaming                 |
+| Our products | Sablier Lockup, Sablier Flow, Airstreams         |
+| Users        | recipients, senders, stream creators             |
+| Actions      | stream, vest, distribute, claim, withdraw        |
+| Our strength | battle-tested, decentralized, immutable, audited |
 
 ### Terms to Avoid
 
@@ -85,12 +85,12 @@ Use precise technical terms but explain them on first use for non-expert audienc
 
 ### Structure by Content Type
 
-| Type          | Pattern                                                          |
-| ------------- | ---------------------------------------------------------------- |
+| Type          | Pattern                                                             |
+| ------------- | ------------------------------------------------------------------- |
 | Blog posts    | Problem → Context → Solution → How it works → Benefits → Next steps |
 | Case studies  | Customer context → Challenge → Solution (Sablier) → Results → Quote |
-| Announcements | What → Why it matters → How it works → What's next               |
-| Educational   | Concept → Why it matters → How it works → Examples → Implications |
+| Announcements | What → Why it matters → How it works → What's next                  |
+| Educational   | Concept → Why it matters → How it works → Examples → Implications   |
 
 ### Closings
 

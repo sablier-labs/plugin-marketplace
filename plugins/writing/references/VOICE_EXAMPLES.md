@@ -47,7 +47,7 @@ _Why it works: Builds anticipation, makes the connection to benefits clear._
 > There are two main advantages to having a vested airdrop:
 >
 > 1. Prevents dumping on day 1, given the tokens are vested and gradually unlocked.
-> 2. Ensures community alignment, as recipients know they will still be receiving tokens X months/years from now,
+> 1. Ensures community alignment, as recipients know they will still be receiving tokens X months/years from now,
 >    meaning they have an incentive to stay involved in the project.
 
 _Why it works: Clear numbered benefits, explains the "why" for each._
@@ -111,11 +111,11 @@ _Why it works: Direct recommendation, multiple CTAs for different intents._
 ## Recurring Themes
 
 1. **"Low, predictable fees"** — Transparent pricing, senders can cover for recipients
-2. **"Battle-tested"** — Security track record (5+ years, no hacks)
-3. **"Set and forget"** — Automation benefit
-4. **"Long-term alignment"** — Community incentive benefit
-5. **"Prevent dumping"** — Airdrop-specific benefit
-6. **"Day 1"** — Common reference point for airdrop problems
+1. **"Battle-tested"** — Security track record (5+ years, no hacks)
+1. **"Set and forget"** — Automation benefit
+1. **"Long-term alignment"** — Community incentive benefit
+1. **"Prevent dumping"** — Airdrop-specific benefit
+1. **"Day 1"** — Common reference point for airdrop problems
 
 **Historical note**: "Free to use" was a key theme until February 2025 pricing changes. Older posts reference
 this—new content should use current pricing messaging.
