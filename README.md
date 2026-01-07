@@ -8,16 +8,28 @@ See Anthropic's [official docs](https://code.claude.com/docs/en/plugin-marketpla
 
 ### sablier
 
-Sablier protocol context and design guidelines.
+Sablier protocol context, design guidelines, and content creation.
 
 **Skills:**
 
 - `sablier` — Sablier protocol overview: token vesting, airdrops, and onchain payroll
 - `design` — Sablier dark-theme aesthetic and production-grade React interfaces
+- `x-twitter` — X/Twitter posts: announcements, educational content, social proof, hot takes
+- `blog-posts` — Blog content: announcements, educational articles, comparisons, technical deep dives
+- `case-studies` — Customer success stories with outcomes and quotes
 
 **Commands:**
 
 - `/create-issue` — Create GitHub issues in sablier-labs repositories
+
+**References:**
+
+- `BRAND_VOICE.md` — How Sablier sounds
+- `COMPANY_PROFILE.md` — Products, metrics, positioning
+- `ICP.md` — Target audience segments
+- `VOICE_EXAMPLES.md` — Past content for consistency
+
+Writing skills reference `https://docs.sablier.com/llms.txt` for product details.
 
 ### fp
 
