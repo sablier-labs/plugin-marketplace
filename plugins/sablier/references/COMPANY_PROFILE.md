@@ -2,18 +2,18 @@
 
 ## Company Info
 
-| Field        | Value                           |
-| ------------ | ------------------------------- |
-| Name         | Sablier Labs                    |
-| Founded      | 2019                            |
-| Headquarters | Remote (UK, Romania, Canada)    |
-| Team size    | 9                               |
-| Website      | https://sablier.com             |
-| App          | https://app.sablier.com         |
-| Twitter      | https://twitter.com/Sablier     |
-| GitHub       | https://github.com/sablier-labs |
-| Discord      | https://discord.sablier.com     |
-| Farcaster    | @sablier                        |
+| Field        | Value                                     |
+| ------------ | ----------------------------------------- |
+| Name         | Sablier Labs                              |
+| Founded      | 2019                                      |
+| Headquarters | UK (employees in UK, Romania, Canada, US) |
+| Team size    | 9                                         |
+| Website      | https://sablier.com                       |
+| App          | https://app.sablier.com                   |
+| Twitter      | https://twitter.com/Sablier               |
+| GitHub       | https://github.com/sablier-labs           |
+| Discord      | https://discord.sablier.com               |
+| Farcaster    | @sablier                                  |
 
 ## Funding
 
@@ -58,7 +58,7 @@ Token vesting and distribution with customizable unlock schedules.
 - Snapshot governance integration
 - Safe multisig integration
 
-### Airstreams
+### Sablier Airdrops
 
 Vested airdrops that prevent day-1 dumping.
 
@@ -72,8 +72,8 @@ Vested airdrops that prevent day-1 dumping.
 - Optional expiration dates
 - Recoverable unclaimed tokens
 
-**Differentiator**: Traditional airdrops release all tokens at once, leading to immediate selling. Airstreams vest
-tokens over time, aligning community incentives.
+**Differentiator**: Traditional airdrops release all tokens at once, leading to immediate selling. Sablier Airdrops
+vest tokens over time, aligning community incentives.
 
 ### Sablier Flow
 
@@ -128,8 +128,7 @@ Safe (multisig), Snapshot (governance voting), Fjord (token launches), Various D
 
 ## Notable Customers
 
-**Named customers**: Shapeshift, NounsDAO, VitaDAO, Maple Finance, TokenSight, Shell Protocol, Exactly Protocol,
-Salad, Weave, Parifi, TokenOps, Arcadia, EARN'M, Rook Labs, ECF (Ethereum Community Fund)
+**Named customers**: Ethena, Uniswap DAO, Fluid, Maple, Immutable
 
 **Types of orgs**: DAOs, DeFi protocols, crypto startups, grant programs
 
@@ -179,7 +178,7 @@ Salad, Weave, Parifi, TokenOps, Arcadia, EARN'M, Rook Labs, ECF (Ethereum Commun
 
 **Coined by**: Sablier (2019)
 
-### Airstreams
+### Sablier Airdrops
 
 **Definition**: Vested airdrops where recipients receive tokens over time rather than all at once
 
@@ -201,7 +200,7 @@ Salad, Weave, Parifi, TokenOps, Arcadia, EARN'M, Rook Labs, ECF (Ethereum Commun
 | 2022 | Expanded to Optimism, Arbitrum, Avalanche |
 | 2022 | Pre-seed funding ($500K)                  |
 | 2023 | Sablier Lockup launched with NFT streams  |
-| 2023 | Airstreams product launched               |
+| 2023 | Sablier Airdrops launched                 |
 | 2024 | Seed funding ($4.5M)                      |
 | 2024 | a16z CSX participation                    |
 | 2024 | Sablier Flow launched                     |

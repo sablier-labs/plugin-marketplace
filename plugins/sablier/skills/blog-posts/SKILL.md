@@ -289,10 +289,9 @@ Technical content for developers.
 
 When relevant, weave in:
 
-- 5+ years without hacks
-- 125,000+ streams created
-- $200M+ TVL
-- Major customers (Shapeshift, NounsDAO, Maple, etc.)
+- 6+ years without hacks
+- 530,000+ streams created
+- Major customers (Ethena, Uniswap DAO, Fluid, Maple, Immutable)
 - Low, predictable fees
 - Multiple audits
 - Since 2019

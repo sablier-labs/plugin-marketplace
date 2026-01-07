@@ -51,7 +51,7 @@
 | Category     | Terms                                            |
 | ------------ | ------------------------------------------------ |
 | Our concept  | money streaming, token streaming                 |
-| Our products | Sablier Lockup, Sablier Flow, Airstreams         |
+| Our products | Sablier Lockup, Sablier Flow, Sablier Airdrops   |
 | Users        | recipients, senders, stream creators             |
 | Actions      | stream, vest, distribute, claim, withdraw        |
 | Our strength | battle-tested, decentralized, immutable, audited |
@@ -110,14 +110,13 @@ Use precise technical terms but explain them on first use for non-expert audienc
 
 Always include when relevant:
 
-- 5+ years running without hacks
-- 125,000+ streams created
-- $200M+ average monthly TVL
+- 6+ years running without hacks
+- 530,000+ streams created
 - Multiple security audits
 - Low, predictable fees (~$1-2 per action)
 - Senders can cover fees for recipients
 - Fully decentralized and immutable
-- Major customers: Shapeshift, NounsDAO, VitaDAO, Maple Finance
+- Major customers: Ethena, Uniswap DAO, Fluid, Maple, Immutable
 
 **How to use**: Specific numbers > vague claims. Let data speak rather than adjectives.
 
@@ -156,8 +155,8 @@ _Why it works: Direct, benefit-focused, specific_
 
 **Establishing credibility:**
 
-> "Sablier is a fully decentralized protocol that has been running on Mainnet since 2019 without any hacks, with a
-> median monthly TVL of $152M between 2021 and 2023."
+> "Sablier is a fully decentralized protocol that has been running on Mainnet since 2019 without any hacks, with over
+> 530,000 streams created and 370,000+ users."
 
 _Why it works: Specific numbers, factual, lets data speak_
 

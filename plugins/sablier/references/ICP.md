@@ -65,7 +65,7 @@ and community members.
 
 **What Resonates:**
 
-- Airstreams preventing day-1 dumps
+- Sablier Airdrops preventing day-1 dumps
 - Battle-tested security (don't roll your own)
 - Scalability (50k recipients per campaign)
 - Gas efficiency (recipients pay claim gas)

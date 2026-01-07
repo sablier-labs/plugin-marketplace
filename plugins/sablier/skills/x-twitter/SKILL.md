@@ -64,7 +64,7 @@ The problem with traditional airdrops:
 
 Vested airdrops fix this. Recipients get tokens over time, creating incentives to stay engaged.
 
-This is why we built Airstreams.
+This is why we built Sablier Airdrops.
 ```
 
 **Guidelines:**
@@ -86,9 +86,9 @@ Share data points, customer wins, or milestones.
 **Example:**
 
 ```text
-125,000+ streams created on Sablier.
+530,000+ streams created on Sablier.
 
-5+ years of continuous operation, zero hacks.
+6+ years of continuous operation, zero hacks.
 
 The leading token distribution infrastructure in web3.
 ```

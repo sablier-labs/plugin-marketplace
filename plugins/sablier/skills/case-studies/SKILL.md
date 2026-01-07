@@ -247,7 +247,7 @@ title: "[Customer]: [Use Case Outcome]"
 description: "[Brief description for meta/preview]"
 customer: "[Customer name]"
 use_case: ["vesting", "airdrop", "payroll", "grants"]
-products_used: ["Sablier Lockup", "Airstreams", "Flow"]
+products_used: ["Sablier Lockup", "Sablier Airdrops", "Sablier Flow"]
 date: "[Publication date]"
 ---
 ```
