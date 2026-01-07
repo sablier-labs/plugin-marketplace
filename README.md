@@ -8,26 +8,19 @@ See Anthropic's [official docs](https://code.claude.com/docs/en/plugin-marketpla
 
 ### sablier
 
-Sablier protocol context and design guidelines.
+Sablier protocol context, design guidelines, and content creation.
 
 **Skills:**
 
 - `sablier` — Sablier protocol overview: token vesting, airdrops, and onchain payroll
 - `design` — Sablier dark-theme aesthetic and production-grade React interfaces
+- `x-twitter` — X/Twitter posts: announcements, educational content, social proof, hot takes
+- `blog-posts` — Blog content: announcements, educational articles, comparisons, technical deep dives
+- `case-studies` — Customer success stories with outcomes and quotes
 
 **Commands:**
 
 - `/create-issue` — Create GitHub issues in sablier-labs repositories
-
-### writing
-
-Sablier content creation with unified brand voice.
-
-**Skills:**
-
-- `x-twitter` — X/Twitter posts: announcements, educational content, social proof, hot takes
-- `blog-posts` — Blog content: announcements, educational articles, comparisons, technical deep dives
-- `case-studies` — Customer success stories with outcomes and quotes
 
 **References:**
 
@@ -36,10 +29,7 @@ Sablier content creation with unified brand voice.
 - `ICP.md` — Target audience segments
 - `VOICE_EXAMPLES.md` — Past content for consistency
 
-**Documentation:**
-
-Skills reference `https://docs.sablier.com/llms.txt` for product details. For local caching, documentation can be
-stored in `plugins/writing/cache/` (gitignored).
+Writing skills reference `https://docs.sablier.com/llms.txt` for product details.
 
 ### fp
 
@@ -98,7 +88,6 @@ Then, run these commands in a Claude Code chat:
 
 # Install plugins (choose the ones you need)
 /plugin install sablier@sablier-plugins
-/plugin install writing@sablier-plugins
 /plugin install fp@sablier-plugins
 /plugin install frontend@sablier-plugins
 /plugin install testing@sablier-plugins
