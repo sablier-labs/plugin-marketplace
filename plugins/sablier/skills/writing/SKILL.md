@@ -45,11 +45,11 @@ For customer success stories documenting how organizations use Sablier.
 **Standard structure:**
 
 1. About [Customer] — 2-3 sentences
-2. The Challenge — what problem, why it mattered
-3. The Solution — why Sablier, how implemented
-4. The Results — quantifiable outcomes
-5. Customer Quote — direct quote if available
-6. Key Takeaway — one actionable insight
+1. The Challenge — what problem, why it mattered
+1. The Solution — why Sablier, how implemented
+1. The Results — quantifiable outcomes
+1. Customer Quote — direct quote if available
+1. Key Takeaway — one actionable insight
 
 ### X/Twitter Posts
 
