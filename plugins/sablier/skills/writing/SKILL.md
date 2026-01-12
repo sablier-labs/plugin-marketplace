@@ -28,13 +28,13 @@ For long-form content: product announcements, educational articles, comparisons,
 
 **Quick reference for post types:**
 
-| Type                 | Length        | Purpose                          |
-| -------------------- | ------------- | -------------------------------- |
-| Product Announcement | 800-1500w     | Introduce new features/products  |
-| Educational          | 1000-2500w    | Teach concepts, best practices   |
-| Case Study           | 600-1000w     | Customer success stories         |
-| Comparison           | 1000-2000w    | Compare approaches/solutions     |
-| Technical Deep Dive  | 1500-3000w    | Developer-focused technical docs |
+| Type                 | Length     | Purpose                          |
+| -------------------- | ---------- | -------------------------------- |
+| Product Announcement | 800-1500w  | Introduce new features/products  |
+| Educational          | 1000-2500w | Teach concepts, best practices   |
+| Case Study           | 600-1000w  | Customer success stories         |
+| Comparison           | 1000-2000w | Compare approaches/solutions     |
+| Technical Deep Dive  | 1500-3000w | Developer-focused technical docs |
 
 ### Case Studies
 
@@ -59,13 +59,13 @@ For social media content: announcements, educational threads, social proof, hot 
 
 **Post type quick reference:**
 
-| Type              | Structure                                 |
-| ----------------- | ----------------------------------------- |
-| Announcement      | News → benefit → link                     |
-| Educational       | Problem → explanation → Sablier approach  |
-| Social Proof      | Metric → context → positioning            |
-| Case Study Teaser | Customer + outcome → quote → link         |
-| Hot Take          | Position → reasoning → call to action     |
+| Type              | Structure                                |
+| ----------------- | ---------------------------------------- |
+| Announcement      | News → benefit → link                    |
+| Educational       | Problem → explanation → Sablier approach |
+| Social Proof      | Metric → context → positioning           |
+| Case Study Teaser | Customer + outcome → quote → link        |
+| Hot Take          | Position → reasoning → call to action    |
 
 ## Voice Principles
 
