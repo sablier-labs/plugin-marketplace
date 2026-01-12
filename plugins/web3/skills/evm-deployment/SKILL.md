@@ -40,7 +40,7 @@ Execute steps **in order**, tracking state between each:
 
 ### Step 1: Deploy Contracts
 
-Reference: `references/deploy.md` | Examples: `references/examples.md`
+Reference: `./references/deploy.md` | Examples: `./references/examples.md`
 
 Deploy protocol contracts using Foundry. Handles:
 
@@ -50,7 +50,7 @@ Deploy protocol contracts using Foundry. Handles:
 
 ### Step 2: Update SDK (optional)
 
-Reference: `references/copy-to-sdk.md`
+Reference: `./references/copy-to-sdk.md`
 
 Copy broadcast artifacts to SDK repository:
 
@@ -60,7 +60,7 @@ Copy broadcast artifacts to SDK repository:
 
 ### Step 3: Create Test Data (optional)
 
-Reference: `references/deploy-streams.md`
+Reference: `./references/deploy-streams.md`
 
 For Flow and Lockup protocols only. Creates sample streams for testing:
 

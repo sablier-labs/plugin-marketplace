@@ -91,7 +91,7 @@ Apply these core principles when writing Effect code:
 - Use Effect's typed error system instead of throwing exceptions
 - Define descriptive error types with proper error propagation
 - Use `Effect.fail`, `Effect.catchTag`, `Effect.catchAll` for error control flow
-- See `references/CRITICAL_RULES.md` for forbidden patterns
+- See `./references/CRITICAL_RULES.md` for forbidden patterns
 
 ### Dependency Injection
 
@@ -116,7 +116,7 @@ Apply these core principles when writing Effect code:
 
 ## Critical Rules
 
-Read and internalize `references/CRITICAL_RULES.md` before writing any Effect code. Key guidelines:
+Read and internalize `./references/CRITICAL_RULES.md` before writing any Effect code. Key guidelines:
 
 - **INEFFECTIVE:** try-catch in Effect.gen (Effect failures aren't thrown)
 - **AVOID:** Type assertions (as never/any/unknown)
@@ -128,8 +128,8 @@ Quick links to patterns that frequently cause issues:
 
 - **SubscriptionRef version mismatch** — `unsafeMake is not a function` → [Quick Reference](#subscriptionref-reactive-references)
 - **Cancellation vs Failure** — Interrupts aren't errors → [Error Taxonomy](#error-taxonomy)
-- **Option vs null** — Use Option internally, null at boundaries → [OPTION_NULL.md](references/OPTION_NULL.md)
-- **Stream backpressure** — Infinite streams hang → [STREAMS.md](references/STREAMS.md)
+- **Option vs null** — Use Option internally, null at boundaries → [OPTION_NULL.md](./references/OPTION_NULL.md)
+- **Stream backpressure** — Infinite streams hang → [STREAMS.md](./references/STREAMS.md)
 
 ## Explaining Solutions
 
@@ -476,9 +476,9 @@ eventEmitter.on("event", noop)        // Register empty handler
 
 ### Reference Files
 
-- **`references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions
-- **`references/EFFECT_ATOM.md`** — Effect-Atom reactive state management for React
-- **`references/NEXT_JS.md`** — Effect + Next.js 15+ App Router integration patterns
-- **`references/OPTION_NULL.md`** — Option vs null boundary patterns
-- **`references/STREAMS.md`** — Stream patterns and backpressure gotchas
-- **`references/TESTING.md`** — Vitest deterministic testing patterns
+- **`./references/CRITICAL_RULES.md`** — Forbidden patterns and mandatory conventions
+- **`./references/EFFECT_ATOM.md`** — Effect-Atom reactive state management for React
+- **`./references/NEXT_JS.md`** — Effect + Next.js 15+ App Router integration patterns
+- **`./references/OPTION_NULL.md`** — Option vs null boundary patterns
+- **`./references/STREAMS.md`** — Stream patterns and backpressure gotchas
+- **`./references/TESTING.md`** — Vitest deterministic testing patterns

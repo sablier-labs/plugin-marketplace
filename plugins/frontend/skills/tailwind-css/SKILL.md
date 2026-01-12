@@ -12,10 +12,10 @@ component styling with tailwind-variants.
 
 ## Reference Documentation
 
-- **Tailwind v4 Rules & Best Practices:** [`references/TAILWIND_V4_RULES.md`](./references/TAILWIND_V4_RULES.md)
+- **Tailwind v4 Rules & Best Practices:** [`./references/TAILWIND_V4_RULES.md`](./references/TAILWIND_V4_RULES.md)
   - Breaking changes, removed/renamed utilities, layout rules, typography, gradients, CSS variables, new v4 features,
     common pitfalls
-- **tailwind-variants Patterns:** [`references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md)
+- **tailwind-variants Patterns:** [`./references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md)
   - Component variants, slots API, composition, TypeScript integration, responsive variants
 
 ## Core Principles
@@ -207,7 +207,7 @@ button(); // Uses defaults
 button({ color: "secondary", size: "lg" });
 ```
 
-**See [`references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md) for:**
+**See [`./references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md) for:**
 
 - Slots API for multi-part components
 - Compound variants
@@ -230,12 +230,12 @@ button({ color: "secondary", size: "lg" });
 
 **Creating a component with variants:**
 
-1. Read [`references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md) for patterns
+1. Read [`./references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md) for patterns
 1. Use `tv()` for type-safe variants
 1. Extract types with `VariantProps<typeof component>`
 
 **Debugging styles:**
 
-1. Check [`references/TAILWIND_V4_RULES.md`](./references/TAILWIND_V4_RULES.md) for breaking changes
+1. Check [`./references/TAILWIND_V4_RULES.md`](./references/TAILWIND_V4_RULES.md) for breaking changes
 1. Verify gradient syntax (`bg-linear-*`, not `bg-gradient-*`)
 1. Check opacity syntax (`bg-red-500/50`, not `bg-opacity-*`)

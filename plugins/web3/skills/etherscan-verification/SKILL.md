@@ -91,7 +91,7 @@ cast abi-encode "constructor(address,uint256)" 0x123... 1000
 
 ## Special Cases
 
-Reference: `references/special-cases.md`
+Reference: `./references/special-cases.md`
 
 ### Proxy Contracts
 
@@ -111,7 +111,7 @@ src/libraries/<Library>.sol:<Library>
 
 ## Troubleshooting
 
-Reference: `references/troubleshooting.md`
+Reference: `./references/troubleshooting.md`
 
 ### Common Issues
 
@@ -133,4 +133,4 @@ After successful verification:
 
 ## Examples
 
-Reference: `references/examples.md` for real-world verification examples from Monad deployment.
+Reference: `./references/examples.md` for real-world verification examples from Monad deployment.

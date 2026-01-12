@@ -10,10 +10,10 @@ should provide genuine value—not just product pitches.
 
 ## Before Writing
 
-1. **Read** `references/BRAND_VOICE.md` — Sablier's voice and style
-1. **Read** `references/COMPANY_PROFILE.md` — products, metrics, positioning
-1. **Read** `references/ICP.md` — who we're writing for
-1. **Reference** `references/VOICE_EXAMPLES.md` — past posts for consistency
+1. **Read** `./references/BRAND_VOICE.md` — Sablier's voice and style
+1. **Read** `./references/COMPANY_PROFILE.md` — products, metrics, positioning
+1. **Read** `./references/ICP.md` — who we're writing for
+1. **Reference** `./references/VOICE_EXAMPLES.md` — past posts for consistency
 1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Post Types
