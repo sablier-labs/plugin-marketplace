@@ -1,19 +1,7 @@
----
-name: case-studies
-description: Use this skill when writing customer case studies for Sablier, documenting how organizations use Sablier for vesting, airdrops, payroll, or grants.
----
-
-# Case Studies Skill
+# Case Studies
 
 Create compelling customer success stories that demonstrate Sablier's value through real-world outcomes. Case studies
 should be customer-centric—their story, their challenges, their wins.
-
-## Before Writing
-
-1. **Read** `./references/BRAND_VOICE.md` — maintain Sablier's voice
-1. **Read** `./references/ICP.md` — understand what resonates with prospects
-1. **Reference** `./references/VOICE_EXAMPLES.md` — past case studies for tone/structure
-1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Case Study Structure
 

@@ -1,19 +1,7 @@
----
-name: x-twitter
-description: Use this skill when writing X/Twitter posts for Sablier, including product announcements, educational content, social proof, case study highlights, hot takes, and casual brand posts.
----
-
-# X/Twitter Posts Skill
+# X/Twitter Posts
 
 Generate X/Twitter posts that represent the Sablier brand—informative, confident, and focused on real value rather
 than hype.
-
-## Before Writing
-
-1. **Read** `./references/BRAND_VOICE.md` — understand Sablier's voice
-1. **Read** `./references/COMPANY_PROFILE.md` — know our products, metrics, differentiators
-1. **Read** `./references/ICP.md` — understand who we're talking to
-1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Post Types
 
