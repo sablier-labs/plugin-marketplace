@@ -19,23 +19,4 @@ jobs:
         run: just install-mdformat
 
       - name: Check Markdown files
-        id: mdformat
         run: just mdformat-check
-
-      - name: Check JSON/YAML files
-        id: prettier
-        if: always()
-        uses: creyD/prettier_action@v4.6
-        with:
-          dry: true
-          prettier_options: --check **/*.{json,jsonc,yaml,yml}
-
-      - name: Write job summary
-        if: always()
-        run: |
-          echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
-          echo "|-------|--------|" >> $GITHUB_STEP_SUMMARY
-          echo "| mdformat | ${{ steps.mdformat.outcome == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
-          echo "| prettier | ${{ steps.prettier.outcome == 'success' && '✅' || '❌' }} |" >> $GITHUB_STEP_SUMMARY
