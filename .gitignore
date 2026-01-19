@@ -3,3 +3,8 @@ node_modules/
 
 # files
 .DS_Store
+
+# generated assets
+plugins/sablier/skills/assets/output/*.png
+plugins/sablier/skills/assets/output/*.jpg
+plugins/sablier/skills/assets/output/*.webp
