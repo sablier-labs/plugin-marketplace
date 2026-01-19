@@ -25,4 +25,11 @@ just mdformat-check
 just mdformat-write
 ```
 
+Use Prettier for JSON and YAML:
+
+```bash
+nlx prettier --write "**/*.{json,jsonc,yaml,yml}"
+nlx prettier --check "**/*.{json,jsonc,yaml,yml}"
+```
+
 Make sure to run `just full-write` after editing files or generating new ones.

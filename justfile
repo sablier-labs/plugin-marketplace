@@ -4,6 +4,12 @@ set shell := ["bash", "-euo", "pipefail", "-c"]
 set unstable
 
 # ---------------------------------------------------------------------------- #
+#                                   CONSTANTS                                  #
+# ---------------------------------------------------------------------------- #
+
+GLOBS_PRETTIER := "\"**/*.{json,jsonc,yaml,yml}\""
+
+# ---------------------------------------------------------------------------- #
 #                                    RECIPES                                   #
 # ---------------------------------------------------------------------------- #
 
@@ -46,6 +52,7 @@ alias sh := setup-hooks
 [group("checks")]
 @full-check:
     just _run-with-status mdformat-check
+    just _run-with-status prettier-check
     echo ""
     echo -e '{{ GREEN }}All code checks passed!{{ NORMAL }}'
 alias fc := full-check
@@ -54,6 +61,7 @@ alias fc := full-check
 [group("checks")]
 @full-write:
     just _run-with-status mdformat-write
+    just _run-with-status prettier-write
     echo ""
     echo -e '{{ GREEN }}All code fixes applied!{{ NORMAL }}'
 alias fw := full-write
@@ -69,6 +77,18 @@ alias mc := mdformat-check
 @mdformat-write +paths=".":
     mdformat {{ paths }}
 alias mw := mdformat-write
+
+# Check Prettier formatting (JSON/YAML only)
+[group("checks")]
+@prettier-check +globs=GLOBS_PRETTIER:
+    nlx prettier --check {{ globs }}
+alias pc := prettier-check
+
+# Format using Prettier (JSON/YAML only)
+[group("checks")]
+@prettier-write +globs=GLOBS_PRETTIER:
+    nlx prettier --write --log-level warn {{ globs }}
+alias pw := prettier-write
 
 # ---------------------------------------------------------------------------- #
 #                                   UTILITIES                                  #

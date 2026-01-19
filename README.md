@@ -14,7 +14,6 @@ Sablier protocol context, design guidelines, and content creation.
 
 - `sablier` — Sablier protocol overview: token vesting, airdrops, and onchain payroll
 - `design` — Sablier dark-theme aesthetic and production-grade React interfaces
-- `assets` — Generate Sablier-branded 3D visual assets (requires `GEMINI_API_KEY`)
 - `x-twitter` — X/Twitter posts: announcements, educational content, social proof, hot takes
 - `blog-posts` — Blog content: announcements, educational articles, comparisons, technical deep dives
 - `case-studies` — Customer success stories with outcomes and quotes
@@ -96,14 +95,6 @@ Then, run these commands in a Claude Code chat:
 ```
 
 Restart Claude Code, then verify with `/plugin browse` to confirm skills and commands are loaded.
-
-### Environment Variables
-
-Some skills require API keys:
-
-| Skill    | Variable         | Get it at                          |
-| -------- | ---------------- | ---------------------------------- |
-| `assets` | `GEMINI_API_KEY` | https://aistudio.google.com/apikey |
 
 ## Updating
 
