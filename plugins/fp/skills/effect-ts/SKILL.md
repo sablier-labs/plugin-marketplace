@@ -10,22 +10,12 @@ composability, and testing patterns.
 
 ## Prerequisites Check
 
-Before starting any Effect-related work, verify the required local resources exist:
+Before starting any Effect-related work, verify the Effect-TS source code exists at `~/.effect`.
 
-```
-~/.effect/effect      → Effect-TS source code repository
-~/.effect/examples    → Effect usage examples in Markdown
-~/.effect/guide       → Effect guides and documentation
-~/.effect/effect-atom → Effect-Atom reactive state library (optional, for React state management)
-```
-
-**If any directory is missing, stop immediately and inform the user.** These directories are required for accurate
-Effect guidance. The user must clone them before proceeding:
+**If missing, stop immediately and inform the user.** Clone it before proceeding:
 
 ```bash
-mkdir -p ~/.effect
-git clone https://github.com/Effect-TS/effect.git ~/.effect/effect
-# examples and guide repositories must also be cloned
+git clone https://github.com/Effect-TS/effect.git ~/.effect
 ```
 
 ## Research Strategy
@@ -39,11 +29,7 @@ research agents when working with Effect patterns, especially for moderate to hi
    exist in the codebase, follow them for consistency. If no patterns exist, skip this step.
 
 1. **Effect Source Code** — For complex type errors, unclear behavior, or implementation details, examine the Effect
-   source at `~/.effect/effect/packages/effect/src/`. This contains the core Effect logic and modules.
-
-1. **Effect Examples** — Consult `~/.effect/examples/` for practical usage patterns.
-
-1. **Effect Guide** — Reference `~/.effect/guide/` for conceptual explanations. Check its README for structure.
+   source at `~/.effect/packages/effect/src/`. This contains the core Effect logic and modules.
 
 ### When to Research
 
@@ -470,9 +456,11 @@ eventEmitter.on("event", noop)        // Register empty handler
 
 ### Local Effect Resources
 
-- **`~/.effect/effect/packages/effect/src/`** — Core Effect modules and implementation
-- **`~/.effect/examples/`** — Practical Effect usage examples
-- **`~/.effect/guide/`** — Conceptual guides and documentation
+- **`~/.effect/packages/effect/src/`** — Core Effect modules and implementation
+
+### External Resources
+
+- **Effect-Atom** — https://github.com/tim-smart/effect-atom (open in browser for reactive state management patterns)
 
 ### Reference Files
 

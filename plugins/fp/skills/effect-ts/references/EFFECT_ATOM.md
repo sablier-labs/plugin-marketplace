@@ -3,7 +3,7 @@
 Reactive state management library for Effect. Provides atoms (reactive state containers) that integrate with Effect's
 functional programming ecosystem and React.
 
-**Source code:** `~/.effect/effect-atom`
+**Source code:** https://github.com/tim-smart/effect-atom (open in browser)
 
 ## Core API
 
