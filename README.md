@@ -55,13 +55,13 @@ Frontend development tools: Tailwind CSS, Zustand, UI specs.
 
 ### testing
 
-Testing frameworks and patterns for TypeScript and Solidity projects.
+Testing frameworks and patterns for Solidity and TypeScript projects.
 
 **Skills:**
 
-- `vitest-v4` — Vitest v4 testing patterns for TypeScript React/Next.js
 - `btt` — Bulloak tree specifications for smart contract integration tests
 - `foundry` — Foundry tests, fuzz tests, fork tests, invariant tests, and deployment scripts
+- `vitest-v4` — Vitest v4 testing patterns for TypeScript React/Next.js
 
 ### web3
 
