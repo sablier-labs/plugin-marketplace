@@ -60,8 +60,8 @@ Testing frameworks and patterns for TypeScript and Solidity projects.
 **Skills:**
 
 - `vitest-v4` — Vitest v4 testing patterns for TypeScript React/Next.js
-- `btt-testing` — Bulloak tree specifications for smart contract integration tests
-- `foundry-testing` — Foundry tests, fuzz tests, fork tests, invariant tests, and deployment scripts
+- `btt` — Bulloak tree specifications for smart contract integration tests
+- `foundry` — Foundry tests, fuzz tests, fork tests, invariant tests, and deployment scripts
 
 ### web3
 
