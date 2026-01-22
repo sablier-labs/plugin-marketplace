@@ -13,7 +13,7 @@ jobs:
       - uses: extractions/setup-just@v3
       - uses: astral-sh/setup-uv@v7
         with:
-          python-version: "3.13"
+          python-version: "3.14"
 
       - name: Install mdformat
         run: just install-mdformat
@@ -32,7 +32,7 @@ jobs:
 
       - name: Write job summary
         if: always()
-        run: |
+        run: | #shell
           echo "## Lint Results" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Check | Status |" >> $GITHUB_STEP_SUMMARY
