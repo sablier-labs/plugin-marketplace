@@ -71,6 +71,7 @@ Blockchain and Web3 development tools.
 
 - `etherscan-api` — Etherscan API V2 for blockchain balance queries
 - `viem` — Viem TypeScript interface for Ethereum interactions
+- `web3-bd-prospect-qualification` — Qualify web3 companies for token vesting, airdrop distribution, or allocation infrastructure
 
 ## Installation
 
