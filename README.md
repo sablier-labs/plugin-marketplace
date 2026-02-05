@@ -1,4 +1,8 @@
-# plugin-marketplace
+# Sablier Plugin Marketplace
+
+> [!NOTE]
+>
+> This repo is now deprecated. Please use [sablier-labs/agent-skills](https://github.com/sablier-labs/sablier-plugins) instead.
 
 Official Sablier plugin marketplace for AI agents like Claude Code.
 
