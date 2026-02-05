@@ -1,5 +1,2 @@
-exclude = [
-  ".serena/**",
-  ".venv/**",
-  "node_modules/**",
-]
+exclude = [".serena/**", ".venv/**", "node_modules/**"]
+number = true

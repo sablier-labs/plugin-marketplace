@@ -153,12 +153,12 @@ forge script scripts/solidity/Deploy.s.sol \
 ### 2. Safe Transaction Builder
 
 1. Go to Safe Transaction Builder
-1. Import contract ABI
-1. Set:
+2. Import contract ABI
+3. Set:
    - To: CREATE2 deployer or direct deployment
    - Value: 0
    - Data: from `deployment-tx.json`
-1. Simulate via Tenderly
+4. Simulate via Tenderly
 
 ### 3. Collect Signatures
 
@@ -182,23 +182,23 @@ If deployment fails or issues discovered:
 ### Immediate Actions
 
 1. **Pause** if pausable and issue is critical
-1. **Communicate** to team immediately
-1. **Document** the issue and affected transactions
+2. **Communicate** to team immediately
+3. **Document** the issue and affected transactions
 
 ### For Upgradeable Contracts
 
 1. Prepare fix in new implementation
-1. Test fix thoroughly
-1. Deploy new implementation
-1. Queue upgrade (if timelock)
-1. Execute upgrade
+2. Test fix thoroughly
+3. Deploy new implementation
+4. Queue upgrade (if timelock)
+5. Execute upgrade
 
 ### For Non-Upgradeable Contracts
 
 1. Deploy fixed version at new address
-1. Migrate users/state if needed
-1. Update frontend to new address
-1. Communicate migration path
+2. Migrate users/state if needed
+3. Update frontend to new address
+4. Communicate migration path
 
 ______________________________________________________________________
 

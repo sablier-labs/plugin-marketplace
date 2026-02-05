@@ -48,13 +48,13 @@ ELSE:
 
 1. Extract key terms from the remaining `$ARGUMENTS` (issue description)
 
-1. Search for similar open issues (full-text search across title and body):
+2. Search for similar open issues (full-text search across title and body):
 
    ```bash
    gh search issues "{key_terms}" --repo "sablier-labs/{repo_name}" --state open --limit 10 --json number,title,url
    ```
 
-1. **IF similar issues found:**
+3. **IF similar issues found:**
 
    - Display the list of potentially related issues to the user
    - Use `AskUserQuestion` to prompt: "Similar issues found. Do you want to proceed with creating a new issue?"
@@ -62,7 +62,7 @@ ELSE:
    - IF user selects "No": Exit command with message "Issue creation cancelled"
    - IF user selects "Yes": Continue to STEP 3
 
-1. **IF no similar issues found:**
+4. **IF no similar issues found:**
 
    - Inform user: "No similar issues found. Proceeding with issue creation."
    - Continue to STEP 3

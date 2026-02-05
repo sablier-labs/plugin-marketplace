@@ -229,10 +229,10 @@ ______________________________________________________________________
 ## Gas Snapshot Best Practices
 
 1. **Commit `.gas-snapshot`** to track history
-1. **Run on optimized profile** for production-accurate numbers
-1. **Use concrete tests** for stable benchmarks (fuzz has variance)
-1. **Separate gas tests** from functional tests
-1. **Document thresholds** in comments or constants
+2. **Run on optimized profile** for production-accurate numbers
+3. **Use concrete tests** for stable benchmarks (fuzz has variance)
+4. **Separate gas tests** from functional tests
+5. **Document thresholds** in comments or constants
 
 ______________________________________________________________________
 

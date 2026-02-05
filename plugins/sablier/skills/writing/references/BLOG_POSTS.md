@@ -316,12 +316,12 @@ Before publishing:
 ## Common Mistakes to Avoid
 
 1. **Burying the lede**: Put the main point early
-1. **Feature lists without benefits**: Always say "so what"
-1. **Vague claims**: Use specific numbers and examples
-1. **Wall of text**: Break it up with formatting
-1. **Hard sell**: Educate first, position product second
-1. **Hype language**: Let substance do the work
-1. **Forgetting the CTA**: End with clear next steps
+2. **Feature lists without benefits**: Always say "so what"
+3. **Vague claims**: Use specific numbers and examples
+4. **Wall of text**: Break it up with formatting
+5. **Hard sell**: Educate first, position product second
+6. **Hype language**: Let substance do the work
+7. **Forgetting the CTA**: End with clear next steps
 
 ## Post Metadata Template
 

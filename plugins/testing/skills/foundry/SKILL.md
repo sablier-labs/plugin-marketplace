@@ -47,16 +47,16 @@ ______________________________________________________________________
 ### Rules
 
 1. **Stack modifiers** to document BTT path (modifiers are often empty - just document the path)
-1. **Expect events BEFORE action** - `vm.expectEmit()` then call function
-1. **Assert state AFTER action** - Check state changes after function executes
-1. **Use revert helpers** for common patterns (`expectRevert_DelegateCall`, `expectRevert_Null`)
-1. **Named parameters in assertions** - `assertEq(actual, expected, "description")`
+2. **Expect events BEFORE action** - `vm.expectEmit()` then call function
+3. **Assert state AFTER action** - Check state changes after function executes
+4. **Use revert helpers** for common patterns (`expectRevert_DelegateCall`, `expectRevert_Null`)
+5. **Named parameters in assertions** - `assertEq(actual, expected, "description")`
 
 ### Mock Rules
 
 1. Place all mocks in `tests/mocks/`
-1. One mock per scenario (not one mega-mock)
-1. Naming: `*Good`, `*Reverting`, `*InvalidSelector`, `*Reentrant`
+2. One mock per scenario (not one mega-mock)
+3. Naming: `*Good`, `*Reverting`, `*InvalidSelector`, `*Reentrant`
 
 ______________________________________________________________________
 
@@ -69,9 +69,9 @@ ______________________________________________________________________
 ### Rules
 
 1. **Bound before assume** - `_bound()` is more efficient than `vm.assume()`
-1. **Bound in dependency order** - Independent params first, then dependent
-1. **Never hardcode** params with validation constraints
-1. **Document fuzzed scenarios** in NatSpec
+2. **Bound in dependency order** - Independent params first, then dependent
+3. **Never hardcode** params with validation constraints
+4. **Document fuzzed scenarios** in NatSpec
 
 ### Bounding Pattern
 
@@ -90,9 +90,9 @@ ______________________________________________________________________
 ### Rules
 
 1. Create fork with `vm.createSelectFork("ethereum")`
-1. Use `deal()` to give tokens to test users
-1. Use `assumeNoBlacklisted()` for USDC/USDT
-1. Use `forceApprove()` for non-standard tokens (USDT)
+2. Use `deal()` to give tokens to test users
+3. Use `assumeNoBlacklisted()` for USDC/USDT
+4. Use `forceApprove()` for non-standard tokens (USDT)
 
 ### Token Quirks
 
@@ -118,9 +118,9 @@ tests/invariant/
 ### Rules
 
 1. **Target handlers only** - `targetContract(address(handler))`
-1. **Exclude protocol contracts** - `excludeSender(address(vault))`
-1. **Use stores** to track totals for invariant assertions
-1. **Early return** in handlers if preconditions not met
+2. **Exclude protocol contracts** - `excludeSender(address(vault))`
+3. **Use stores** to track totals for invariant assertions
+4. **Early return** in handlers if preconditions not met
 
 ______________________________________________________________________
 
@@ -129,8 +129,8 @@ ______________________________________________________________________
 ### Rules
 
 1. Inherit from `BaseScript` with `broadcast` modifier
-1. Use env vars: `ETH_FROM`, `MNEMONIC`
-1. Simulation first, then broadcast
+2. Use env vars: `ETH_FROM`, `MNEMONIC`
+3. Simulation first, then broadcast
 
 ### Commands
 
@@ -205,21 +205,21 @@ forge inspect MyContract storage-layout
 ### Debugging Tips
 
 1. **Label addresses** - `vm.label(addr, "Recipient")` for readable traces
-1. **Check state with logs** - Add `console2.log` before reverts
-1. **Isolate failures** - Run single test with `--match-test`
-1. **Compare gas** - Use `--gas-report` to spot unexpected costs
-1. **Snapshot comparisons** - Use `vm.snapshot()` / `vm.revertTo()` to isolate state changes
+2. **Check state with logs** - Add `console2.log` before reverts
+3. **Isolate failures** - Run single test with `--match-test`
+4. **Compare gas** - Use `--gas-report` to spot unexpected costs
+5. **Snapshot comparisons** - Use `vm.snapshot()` / `vm.revertTo()` to isolate state changes
 
 ______________________________________________________________________
 
 ## Best Practices Summary
 
 1. Use constants from `Defaults`/`Constants` - never hardcode
-1. Specialized mocks - one per scenario, all in `tests/mocks/`
-1. Modifiers in `Modifiers.sol` - centralize BTT path modifiers
-1. Label addresses with `vm.label()` for traces
-1. Events before actions - `vm.expectEmit()` then call
-1. Bound before assume - more efficient
+2. Specialized mocks - one per scenario, all in `tests/mocks/`
+3. Modifiers in `Modifiers.sol` - centralize BTT path modifiers
+4. Label addresses with `vm.label()` for traces
+5. Events before actions - `vm.expectEmit()` then call
+6. Bound before assume - more efficient
 
 ## External References
 
@@ -233,7 +233,7 @@ Test this skill with these prompts:
 
 1. **Integration test**: "Write a concrete test for `withdraw` that expects `Errors.Flow_Overdraw` when amount exceeds
    balance"
-1. **Fuzz test**: "Create a fuzz test for `deposit` that bounds amount between 1 and type(uint128).max"
-1. **Fork test**: "Write a fork test for USDC deposits on mainnet with blacklist handling"
-1. **Invariant test**: "Create an invariant handler for the `deposit` and `withdraw` functions"
-1. **Deploy script**: "Write a deployment script for SablierFlow with verification"
+2. **Fuzz test**: "Create a fuzz test for `deposit` that bounds amount between 1 and type(uint128).max"
+3. **Fork test**: "Write a fork test for USDC deposits on mainnet with blacklist handling"
+4. **Invariant test**: "Create an invariant handler for the `deposit` and `withdraw` functions"
+5. **Deploy script**: "Write a deployment script for SablierFlow with verification"

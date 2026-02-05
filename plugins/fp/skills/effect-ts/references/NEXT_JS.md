@@ -224,7 +224,7 @@ test("should create user", async () => {
 ## Best Practices
 
 1. **Use `Effect.fn()`** — Automatic telemetry spans and better stack traces
-1. **Centralize layers** — Create `AppLayer` with all shared services
-1. **Error handling** — Use `.catchAll()` or `.catchTag()` for Effect-level errors
-1. **Request caching** — Use `reactCache` for request-scoped memoization
-1. **Server-only Effect** — Effect-ts shines server-side; avoid complex Effect in client components
+2. **Centralize layers** — Create `AppLayer` with all shared services
+3. **Error handling** — Use `.catchAll()` or `.catchTag()` for Effect-level errors
+4. **Request caching** — Use `reactCache` for request-scoped memoization
+5. **Server-only Effect** — Effect-ts shines server-side; avoid complex Effect in client components

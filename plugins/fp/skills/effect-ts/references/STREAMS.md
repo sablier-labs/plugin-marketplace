@@ -128,7 +128,7 @@ Stream.ensuring(stream, cleanup)
 ## Common Gotchas
 
 1. **Infinite streams**: Always bound consumption with `take`, `takeUntil`, or timeout
-1. **Backpressure**: Streams are pull-based; slow consumers automatically apply backpressure
-1. **Resource leaks**: Use scoped/bracket patterns for resources
-1. **Chunking overhead**: Rechunk for better performance with small items
-1. **Error propagation**: Errors terminate the stream; use `catchAll` to recover
+2. **Backpressure**: Streams are pull-based; slow consumers automatically apply backpressure
+3. **Resource leaks**: Use scoped/bracket patterns for resources
+4. **Chunking overhead**: Rechunk for better performance with small items
+5. **Error propagation**: Errors terminate the stream; use `catchAll` to recover

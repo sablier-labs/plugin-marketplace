@@ -44,7 +44,7 @@ const useStore = create((set) => ({ ... })) // ❌ Type inference fails
 The double-call pattern `create<T>()((set) => ...)` solves this by:
 
 1. First call: `create<T>()` - Explicitly provides the type
-1. Second call: `(set) => ...` - Implements the store with that type
+2. Second call: `(set) => ...` - Implements the store with that type
 
 ### Alternative: Using `combine`
 

@@ -13,10 +13,10 @@ hype. This skill covers blog posts, case studies, and X/Twitter content.
 Load shared brand references from the plugin's `references/` directory:
 
 1. **Read** (plugin) `./references/BRAND_VOICE.md` — Sablier's voice and style
-1. **Read** (plugin) `./references/COMPANY_PROFILE.md` — products, metrics, positioning
-1. **Read** (plugin) `./references/ICP.md` — who the audience is
-1. **Reference** (plugin) `./references/VOICE_EXAMPLES.md` — past content for consistency
-1. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
+2. **Read** (plugin) `./references/COMPANY_PROFILE.md` — products, metrics, positioning
+3. **Read** (plugin) `./references/ICP.md` — who the audience is
+4. **Reference** (plugin) `./references/VOICE_EXAMPLES.md` — past content for consistency
+5. **Fetch docs if needed** — use `https://docs.sablier.com/llms.txt` for product details
 
 ## Content Types
 
@@ -45,11 +45,11 @@ For customer success stories documenting how organizations use Sablier.
 **Standard structure:**
 
 1. About [Customer] — 2-3 sentences
-1. The Challenge — what problem, why it mattered
-1. The Solution — why Sablier, how implemented
-1. The Results — quantifiable outcomes
-1. Customer Quote — direct quote if available
-1. Key Takeaway — one actionable insight
+2. The Challenge — what problem, why it mattered
+3. The Solution — why Sablier, how implemented
+4. The Results — quantifiable outcomes
+5. Customer Quote — direct quote if available
+6. Key Takeaway — one actionable insight
 
 ### X/Twitter Posts
 

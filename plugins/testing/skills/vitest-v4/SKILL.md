@@ -389,8 +389,8 @@ Example config: `vitest.config.ts`
 # Next Steps
 
 1. **For Zustand store testing** - Activate `zustand` skill
-1. **For component testing** - See `./references/TESTING_PATTERNS.md` (React Testing Library setup)
-1. **For monorepo-specific strategies** - See `./references/MONOREPO_TESTING.md`
-1. **For debugging help** - See `./references/TROUBLESHOOTING.md`
+2. **For component testing** - See `./references/TESTING_PATTERNS.md` (React Testing Library setup)
+3. **For monorepo-specific strategies** - See `./references/MONOREPO_TESTING.md`
+4. **For debugging help** - See `./references/TROUBLESHOOTING.md`
 
 Start with simple unit tests, add component tests as needed.

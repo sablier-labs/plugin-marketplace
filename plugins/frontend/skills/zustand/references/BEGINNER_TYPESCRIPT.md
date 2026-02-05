@@ -369,9 +369,9 @@ function DataList() {
 **Pattern breakdown:**
 
 1. Set `isLoading: true` before async operation
-1. Try/catch block for error handling
-1. Update state with data or error
-1. Set `isLoading: false` in both success and error cases
+2. Try/catch block for error handling
+3. Update state with data or error
+4. Set `isLoading: false` in both success and error cases
 
 ## Multiple Stores
 

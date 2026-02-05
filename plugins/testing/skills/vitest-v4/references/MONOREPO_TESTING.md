@@ -155,8 +155,8 @@ import { createLogger } from "@shared/utils/logger";
 **Import not found:**
 
 1. Check `vitest.config.ts` alias matches import
-1. Verify `tsconfig.json` paths match
-1. Ensure no trailing slashes in config
+2. Verify `tsconfig.json` paths match
+3. Ensure no trailing slashes in config
 
 ```typescript
 // Wrong
@@ -619,9 +619,9 @@ nlx vitest                   # No coverage overhead
 **Fix:**
 
 1. Check `vitest.config.ts` alias
-1. Verify `tsconfig.json` paths
-1. Restart IDE/dev server
-1. Clear cache: `rm -rf node_modules/.vite`
+2. Verify `tsconfig.json` paths
+3. Restart IDE/dev server
+4. Clear cache: `rm -rf node_modules/.vite`
 
 ### Mock Not Working Across Apps
 
@@ -653,7 +653,7 @@ setupFiles: ["./tests/setup.ts"],
 **Fix:**
 
 1. Check file naming: `*.test.ts` or `*.test.tsx`
-1. Verify not in exclude pattern:
+2. Verify not in exclude pattern:
 
 ```typescript
 // vitest.config.ts

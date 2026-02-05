@@ -21,7 +21,7 @@ Run `just --list` to show all available commands.
 ### Development Workflow
 
 1. Fork the repository
-1. Create a feature branch
-1. Make your changes
-1. Run `mdformat --check .` to verify formatting
-1. Submit a pull request
+2. Create a feature branch
+3. Make your changes
+4. Run `mdformat --check .` to verify formatting
+5. Submit a pull request

@@ -32,87 +32,87 @@ DETERMINE thinking mode from arguments:
 
 **Analysis framework - cover ALL of these aspects:**
 
-1. **Layout Architecture**
+01. **Layout Architecture**
 
-   - Overall page structure (header, navigation, hero, main content, sidebars, footer)
-   - Grid system and column layouts
-   - Container widths and max-widths
-   - Section hierarchy and nesting
+    - Overall page structure (header, navigation, hero, main content, sidebars, footer)
+    - Grid system and column layouts
+    - Container widths and max-widths
+    - Section hierarchy and nesting
 
-1. **Typography System**
+02. **Typography System**
 
-   - Font families (identify primary, secondary, monospace)
-   - Font sizes for each text level (h1-h6, body, small, etc.)
-   - Font weights used (light, regular, medium, semibold, bold)
-   - Line heights and letter spacing
-   - Text colors and contrast ratios
+    - Font families (identify primary, secondary, monospace)
+    - Font sizes for each text level (h1-h6, body, small, etc.)
+    - Font weights used (light, regular, medium, semibold, bold)
+    - Line heights and letter spacing
+    - Text colors and contrast ratios
 
-1. **Color Palette**
+03. **Color Palette**
 
-   - Primary brand colors
-   - Secondary/accent colors
-   - Background colors (main, sections, cards)
-   - Text colors (headings, body, muted, links)
-   - Border colors
-   - State colors (success, error, warning, info)
-   - Color codes in hex/rgb (best approximation)
+    - Primary brand colors
+    - Secondary/accent colors
+    - Background colors (main, sections, cards)
+    - Text colors (headings, body, muted, links)
+    - Border colors
+    - State colors (success, error, warning, info)
+    - Color codes in hex/rgb (best approximation)
 
-1. **Spacing System**
+04. **Spacing System**
 
-   - Margins between major sections
-   - Padding within components
-   - Gap spacing in flex/grid layouts
-   - Consistent spacing scale (e.g., 4px, 8px, 16px, 24px, 32px)
-   - Vertical rhythm patterns
+    - Margins between major sections
+    - Padding within components
+    - Gap spacing in flex/grid layouts
+    - Consistent spacing scale (e.g., 4px, 8px, 16px, 24px, 32px)
+    - Vertical rhythm patterns
 
-1. **Component Inventory**
+05. **Component Inventory**
 
-   - Buttons (styles, sizes, states)
-   - Input fields and forms
-   - Cards and containers
-   - Navigation elements
-   - Icons and their style
-   - Badges, tags, labels
-   - Modals, tooltips, dropdowns
-   - List items and data tables
+    - Buttons (styles, sizes, states)
+    - Input fields and forms
+    - Cards and containers
+    - Navigation elements
+    - Icons and their style
+    - Badges, tags, labels
+    - Modals, tooltips, dropdowns
+    - List items and data tables
 
-1. **Visual Design Details**
+06. **Visual Design Details**
 
-   - Border radius values
-   - Shadow styles (box-shadow parameters)
-   - Border styles and thicknesses
-   - Background patterns or gradients
-   - Opacity/transparency effects
+    - Border radius values
+    - Shadow styles (box-shadow parameters)
+    - Border styles and thicknesses
+    - Background patterns or gradients
+    - Opacity/transparency effects
 
-1. **Images and Media**
+07. **Images and Media**
 
-   - Image locations and dimensions
-   - Image aspect ratios
-   - Icon sets (are they SVG, font icons, or images?)
-   - Logo placement and size
-   - Decorative vs content images
-   - **Note**: Which images need to be sourced/created
+    - Image locations and dimensions
+    - Image aspect ratios
+    - Icon sets (are they SVG, font icons, or images?)
+    - Logo placement and size
+    - Decorative vs content images
+    - **Note**: Which images need to be sourced/created
 
-1. **Interactive Elements** (if discernible)
+08. **Interactive Elements** (if discernible)
 
-   - Hover states visible
-   - Active/focus states
-   - Transition/animation hints
-   - Interactive feedback patterns
+    - Hover states visible
+    - Active/focus states
+    - Transition/animation hints
+    - Interactive feedback patterns
 
-1. **Responsive Design** (if multiple viewports shown)
+09. **Responsive Design** (if multiple viewports shown)
 
-   - Breakpoints observable
-   - Layout changes per breakpoint
-   - Component behavior changes
-   - Mobile-specific patterns
+    - Breakpoints observable
+    - Layout changes per breakpoint
+    - Component behavior changes
+    - Mobile-specific patterns
 
-1. **Accessibility Considerations**
+10. **Accessibility Considerations**
 
-   - Color contrast issues
-   - Heading hierarchy
-   - Interactive element sizes
-   - Text readability
+    - Color contrast issues
+    - Heading hierarchy
+    - Interactive element sizes
+    - Text readability
 
 **Analysis process:**
 

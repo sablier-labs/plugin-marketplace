@@ -308,6 +308,6 @@ Use context7 to query specific topics:
 To fetch viem documentation for a specific topic:
 
 1. Resolve the library ID with `mcp__context7__resolve-library-id` (or use `/wevm/viem` directly)
-1. Call `mcp__context7__get-library-docs` with the topic parameter
+2. Call `mcp__context7__get-library-docs` with the topic parameter
 
 Example topics: `"getting started"`, `"wallet client"`, `"send transaction"`, `"read contract"`.

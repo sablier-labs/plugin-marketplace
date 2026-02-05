@@ -230,9 +230,9 @@ Error: Test timeout of 5000ms exceeded
 **Causes:**
 
 1. Unresolved promise
-1. Missing await
-1. Infinite loop
-1. Slow operation
+2. Missing await
+3. Infinite loop
+4. Slow operation
 
 **Fix 1: Increase timeout**
 
@@ -410,8 +410,8 @@ No test files found
 **Causes:**
 
 1. Wrong file naming
-1. Excluded by config
-1. Running from wrong directory
+2. Excluded by config
+3. Running from wrong directory
 
 **Fix 1: Check file naming**
 
@@ -518,10 +518,10 @@ AssertionError: expected false to be true
 **Key information:**
 
 1. **File path:** `apps/web/lib/stores/user.test.ts`
-1. **Test path:** `UserStore > addUser > validates user format`
-1. **Error type:** `AssertionError`
-1. **Expected vs Received:** `true` vs `false`
-1. **Line number:** `48`
+2. **Test path:** `UserStore > addUser > validates user format`
+3. **Error type:** `AssertionError`
+4. **Expected vs Received:** `true` vs `false`
+5. **Line number:** `48`
 
 **Ignore:**
 

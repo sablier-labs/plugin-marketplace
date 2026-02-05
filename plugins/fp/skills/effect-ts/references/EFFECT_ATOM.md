@@ -219,8 +219,8 @@ const messagesAtom = Atom.pull(messageStream)
 ## Best Practices
 
 1. **Use `Atom.family` for dynamic keys** — Generates stable references, avoids memory leaks
-1. **Apply `Atom.keepAlive` for persistent state** — Prevents reset on unmount
-1. **Use `Atom.runtime` for dependency injection** — Integrates Effect layers with React context
-1. **Implement finalizers for cleanup** — Ensures proper resource management
-1. **Use `mode: "promiseExit"` for mutations** — Provides typed success/failure handling
-1. **Prefer derived atoms over component state** — Keeps state logic centralized
+2. **Apply `Atom.keepAlive` for persistent state** — Prevents reset on unmount
+3. **Use `Atom.runtime` for dependency injection** — Integrates Effect layers with React context
+4. **Implement finalizers for cleanup** — Ensures proper resource management
+5. **Use `mode: "promiseExit"` for mutations** — Provides typed success/failure handling
+6. **Prefer derived atoms over component state** — Keeps state logic centralized

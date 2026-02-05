@@ -399,16 +399,16 @@ const input = tv({
 
 ## Best Practices
 
-1. **Use `extend` for composition** - Provides type safety and automatic config merging
-1. **Leverage compound variants** - Handle complex conditional styling declaratively
-1. **Use slots for multi-part components** - Enables granular control
-1. **Define default variants** - Reduces repetition in usage
-1. **Use boolean variants for states** - Clean API for conditional states
-1. **Keep original build unless bundle size critical** - Automatic conflict resolution prevents bugs
-1. **Use `VariantProps` for TypeScript** - Extract types automatically
-1. **Use `as const` for external definitions** - Ensures proper type inference
-1. **Apply responsive prefixes in variants** - Leverage Tailwind's responsive utilities
-1. **Reuse `tv()` instances** - Define once, use multiple times
+01. **Use `extend` for composition** - Provides type safety and automatic config merging
+02. **Leverage compound variants** - Handle complex conditional styling declaratively
+03. **Use slots for multi-part components** - Enables granular control
+04. **Define default variants** - Reduces repetition in usage
+05. **Use boolean variants for states** - Clean API for conditional states
+06. **Keep original build unless bundle size critical** - Automatic conflict resolution prevents bugs
+07. **Use `VariantProps` for TypeScript** - Extract types automatically
+08. **Use `as const` for external definitions** - Ensures proper type inference
+09. **Apply responsive prefixes in variants** - Leverage Tailwind's responsive utilities
+10. **Reuse `tv()` instances** - Define once, use multiple times
 
 ## API Reference
 

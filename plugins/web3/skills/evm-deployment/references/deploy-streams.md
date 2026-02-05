@@ -55,12 +55,12 @@ FOUNDRY_PROFILE=optimized forge script scripts/Init.s.sol:Init \
 **What Init.s.sol does (Flow):**
 
 1. Approves Flow contract for token spending
-1. Creates 10 streams with rates 0.0000001 → 0.000001 tokens/sec
-1. Deposits 2 tokens into stream #1
-1. Pauses streams #2 and #3
-1. Refunds 0.1 tokens from stream #1
-1. Restarts stream #3 with new rate
-1. Voids stream #7
+2. Creates 10 streams with rates 0.0000001 → 0.000001 tokens/sec
+3. Deposits 2 tokens into stream #1
+4. Pauses streams #2 and #3
+5. Refunds 0.1 tokens from stream #1
+6. Restarts stream #3 with new rate
+7. Voids stream #7
 
 ### Lockup Protocol
 
@@ -156,7 +156,7 @@ Campaigns are created via factory (CREATE2). Constructor args are embedded in th
      broadcast/CreateMerkleInstant.s.sol/<CHAIN_ID>/run-latest.json > /tmp/initcode.txt
    ```
 
-1. **Find constructor args** (after Solidity metadata hash):
+2. **Find constructor args** (after Solidity metadata hash):
 
    ```python
    data = open('/tmp/initcode.txt').read().strip()
@@ -166,7 +166,7 @@ Campaigns are created via factory (CREATE2). Constructor args are embedded in th
        print('0x' + args)
    ```
 
-1. **Verify**:
+3. **Verify**:
 
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \

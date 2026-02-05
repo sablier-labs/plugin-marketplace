@@ -55,8 +55,8 @@ ______________________________________________________________________
 ### Rules
 
 1. Centralize all modifiers in `Modifiers.sol`
-1. Inherit from `Fuzzers` for bounding helpers
-1. Use `setMsgSender()` instead of raw `vm.prank()`
+2. Inherit from `Fuzzers` for bounding helpers
+3. Use `setMsgSender()` instead of raw `vm.prank()`
 
 ______________________________________________________________________
 
@@ -65,23 +65,23 @@ ______________________________________________________________________
 ### Rules
 
 1. Create typed bound helpers: `boundUint128`, `boundUint40`
-1. Bound in dependency order (independent params first)
-1. For arrays, fuzz timestamps preserving order
-1. For amounts, ensure first element non-zero
+2. Bound in dependency order (independent params first)
+3. For arrays, fuzz timestamps preserving order
+4. For amounts, ensure first element non-zero
 
 ______________________________________________________________________
 
 ## Base Test Setup Order
 
 1. Call parent setUp
-1. Deploy helper/mock contracts
-1. Label contracts for traces (`vm.label`)
-1. Deploy and configure defaults
-1. Deploy protocol contracts
-1. Create users with approvals
-1. Configure permissions
-1. Set default caller
-1. Warp to realistic time
+2. Deploy helper/mock contracts
+3. Label contracts for traces (`vm.label`)
+4. Deploy and configure defaults
+5. Deploy protocol contracts
+6. Create users with approvals
+7. Configure permissions
+8. Set default caller
+9. Warp to realistic time
 
 ______________________________________________________________________
 
@@ -99,8 +99,8 @@ ______________________________________________________________________
 ### Mock Rules
 
 1. Place all mocks in `tests/mocks/`
-1. One mock per scenario (not mega-mocks)
-1. Name clearly describes behavior
+2. One mock per scenario (not mega-mocks)
+3. Name clearly describes behavior
 
 ______________________________________________________________________
 
@@ -116,5 +116,5 @@ Create helpers for common revert tests:
 ### Rules
 
 1. Initialize all entry IDs in `initializeDefaultEntries()`
-1. Use `ids.nullEntry = 1729` for non-existent entry
-1. Create helpers for repeated assertion patterns
+2. Use `ids.nullEntry = 1729` for non-existent entry
+3. Create helpers for repeated assertion patterns

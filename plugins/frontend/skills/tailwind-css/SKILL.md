@@ -231,11 +231,11 @@ button({ color: "secondary", size: "lg" });
 **Creating a component with variants:**
 
 1. Read [`./references/TAILWIND_VARIANTS.md`](./references/TAILWIND_VARIANTS.md) for patterns
-1. Use `tv()` for type-safe variants
-1. Extract types with `VariantProps<typeof component>`
+2. Use `tv()` for type-safe variants
+3. Extract types with `VariantProps<typeof component>`
 
 **Debugging styles:**
 
 1. Check [`./references/TAILWIND_V4_RULES.md`](./references/TAILWIND_V4_RULES.md) for breaking changes
-1. Verify gradient syntax (`bg-linear-*`, not `bg-gradient-*`)
-1. Check opacity syntax (`bg-red-500/50`, not `bg-opacity-*`)
+2. Verify gradient syntax (`bg-linear-*`, not `bg-gradient-*`)
+3. Check opacity syntax (`bg-red-500/50`, not `bg-opacity-*`)

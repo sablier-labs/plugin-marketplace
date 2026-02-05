@@ -89,9 +89,9 @@ halmos --function check_WithdrawNeverExceedsBalance -vvv
 ### Halmos Best Practices
 
 1. **Bound symbolic inputs** - Unbounded can cause solver timeout
-1. **Use `vm.assume()` sparingly** - Each assumption narrows search space
-1. **Check one property per test** - Easier to debug failures
-1. **Start with simple invariants** - Build up complexity
+2. **Use `vm.assume()` sparingly** - Each assumption narrows search space
+3. **Check one property per test** - Easier to debug failures
+4. **Start with simple invariants** - Build up complexity
 
 ### Common Halmos Patterns
 
@@ -139,8 +139,8 @@ For critical contracts requiring formal proofs.
 ### Setup
 
 1. Install Certora CLI: `pip install certora-cli`
-1. Create `certora/` directory
-1. Write specs in CVL (Certora Verification Language)
+2. Create `certora/` directory
+3. Write specs in CVL (Certora Verification Language)
 
 ### Spec Structure
 

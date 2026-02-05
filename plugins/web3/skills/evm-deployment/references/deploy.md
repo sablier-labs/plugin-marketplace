@@ -189,12 +189,12 @@ FOUNDRY_PROFILE=optimized forge verify-contract \
 Then via Playwright:
 
 1. Navigate to contract page on explorer
-1. Click "Verify & Publish"
-1. Compiler: from `foundry.toml` → `solc` field
-1. License: BUSL-1.1
-1. Method: Standard JSON Input
-1. Upload generated JSON file
-1. Submit
+2. Click "Verify & Publish"
+3. Compiler: from `foundry.toml` → `solc` field
+4. License: BUSL-1.1
+5. Method: Standard JSON Input
+6. Upload generated JSON file
+7. Submit
 
 ## Troubleshooting
 
@@ -203,19 +203,19 @@ Then via Playwright:
 If verification fails with "bytecode does not match":
 
 1. **Check deployment commit** - Find in SDK broadcast JSON or deployment records
-1. **Checkout exact commit**:
+2. **Checkout exact commit**:
    ```bash
    git checkout <DEPLOYMENT_COMMIT>
    ```
-1. **Reinstall dependencies**:
+3. **Reinstall dependencies**:
    ```bash
    bun install
    ```
-1. **Rebuild**:
+4. **Rebuild**:
    ```bash
    FOUNDRY_PROFILE=optimized forge build
    ```
-1. **Retry verification**
+5. **Retry verification**
 
 Root cause: `node_modules` drift from deployment state causes different compilation output.
 
@@ -229,7 +229,7 @@ Comptroller uses ERC1967 proxy pattern. Verify **both** contracts:
    - Proxy deployment
    - Initialize call
 
-1. **Verify implementation**:
+2. **Verify implementation**:
 
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
@@ -241,7 +241,7 @@ Comptroller uses ERC1967 proxy pattern. Verify **both** contracts:
      --watch
    ```
 
-1. **Verify proxy** (use node_modules path):
+3. **Verify proxy** (use node_modules path):
 
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \
@@ -264,7 +264,7 @@ Contracts created via factory (CREATE2) need constructor args extracted from bro
    jq -r '.transactions[0].transaction.input' broadcast/<Script>/<CHAIN_ID>/run-latest.json > /tmp/initcode.txt
    ```
 
-1. **Extract constructor args** (Python):
+2. **Extract constructor args** (Python):
 
    ```python
    data = open('/tmp/initcode.txt').read().strip()
@@ -280,7 +280,7 @@ Contracts created via factory (CREATE2) need constructor args extracted from bro
    - 0.8.29: `64736f6c634300081d0033`
    - 0.8.28: `64736f6c634300081c0033`
 
-1. **Verify with extracted args**:
+3. **Verify with extracted args**:
 
    ```bash
    FOUNDRY_PROFILE=optimized forge verify-contract \

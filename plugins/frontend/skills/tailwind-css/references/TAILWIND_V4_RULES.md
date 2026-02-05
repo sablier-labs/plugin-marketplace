@@ -334,11 +334,11 @@ ul {
 ## Common Pitfalls to Avoid
 
 1. **Using old opacity utilities** - Always use `/opacity` syntax like `bg-red-500/60`
-1. **Redundant breakpoint classes** - Only specify changes
-1. **Space utilities in flex/grid** - Always use gap
-1. **Leading utilities** - Use line-height modifiers like `text-sm/6`
-1. **Arbitrary values** - Use the design scale
-1. **@apply directive** - Use components or CSS variables
-1. **min-h-screen on mobile** - Use min-h-dvh
-1. **Separate width/height** - Use size utilities when equal
-1. **Arbitrary values** - Always use Tailwind's predefined scale whenever possible (e.g., use `ml-4` over `ml-[16px]`)
+2. **Redundant breakpoint classes** - Only specify changes
+3. **Space utilities in flex/grid** - Always use gap
+4. **Leading utilities** - Use line-height modifiers like `text-sm/6`
+5. **Arbitrary values** - Use the design scale
+6. **@apply directive** - Use components or CSS variables
+7. **min-h-screen on mobile** - Use min-h-dvh
+8. **Separate width/height** - Use size utilities when equal
+9. **Arbitrary values** - Always use Tailwind's predefined scale whenever possible (e.g., use `ml-4` over `ml-[16px]`)

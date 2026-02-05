@@ -28,7 +28,7 @@ research agents when working with Effect patterns, especially for moderate to hi
 1. **Codebase Patterns First** — Examine similar patterns in the current project before implementing. If Effect patterns
    exist in the codebase, follow them for consistency. If no patterns exist, skip this step.
 
-1. **Effect Source Code** — For complex type errors, unclear behavior, or implementation details, examine the Effect
+2. **Effect Source Code** — For complex type errors, unclear behavior, or implementation details, examine the Effect
    source at `~/.effect/packages/effect/src/`. This contains the core Effect logic and modules.
 
 ### When to Research
@@ -61,9 +61,9 @@ research agents when working with Effect patterns, especially for moderate to hi
 When working in a project that uses Effect, check for existing patterns before implementing new code:
 
 1. **Search for Effect imports** — Look for files importing from `'effect'` to understand existing usage
-1. **Identify service patterns** — Find how Services and Layers are structured in the project
-1. **Note error handling conventions** — Check how errors are defined and propagated
-1. **Examine test patterns** — Look at how Effect code is tested in the project
+2. **Identify service patterns** — Find how Services and Layers are structured in the project
+3. **Note error handling conventions** — Check how errors are defined and propagated
+4. **Examine test patterns** — Look at how Effect code is tested in the project
 
 **If no Effect patterns exist in the codebase**, proceed using canonical patterns from the Effect source and examples.
 Do not block on missing codebase patterns.

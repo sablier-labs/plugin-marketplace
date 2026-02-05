@@ -38,7 +38,7 @@ Do not default to Ethereum Mainnet. Always infer the chain from the user's promp
 ### Inference Rules
 
 1. **Explicit chain mention** — If the user mentions a chain name (e.g., "on Polygon", "Arbitrum balance", "Base chain"), use that chain.
-1. **Chain-specific tokens** — Some tokens exist primarily on specific chains:
+2. **Chain-specific tokens** — Some tokens exist primarily on specific chains:
    - POL → Polygon (137)
    - ARB → Arbitrum One (42161)
    - OP → OP Mainnet (10)
@@ -47,9 +47,9 @@ Do not default to Ethereum Mainnet. Always infer the chain from the user's promp
    - SONIC → Sonic (146)
    - SEI → Sei (1329)
    - MON → Monad (143)
-1. **Contract address patterns** — If the user provides a contract address, consider asking which chain it's deployed on (many contracts exist on multiple chains).
-1. **Testnet keywords** — Words like "testnet", "Sepolia", "Holesky", "Amoy" indicate testnet chains.
-1. **Ambiguous cases** — If the chain cannot be inferred, **ask the user** before proceeding. Do not assume Ethereum Mainnet.
+3. **Contract address patterns** — If the user provides a contract address, consider asking which chain it's deployed on (many contracts exist on multiple chains).
+4. **Testnet keywords** — Words like "testnet", "Sepolia", "Holesky", "Amoy" indicate testnet chains.
+5. **Ambiguous cases** — If the chain cannot be inferred, **ask the user** before proceeding. Do not assume Ethereum Mainnet.
 
 ### Unsupported Chains
 

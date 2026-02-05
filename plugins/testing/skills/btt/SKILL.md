@@ -72,11 +72,11 @@ FunctionName_ContractName_Integration_Test
 ### Spec
 
 1. In case of single tree per file, the root should be just the function name followed by `_Integration_Concrete_Test`.
-1. In case of multiple trees in the same file, each root must be `Contract::function`, using `::` as a separator, and
+2. In case of multiple trees in the same file, each root must be `Contract::function`, using `::` as a separator, and
    all roots must share the same contract name (e.g., `Foo::hashPair`, `Foo::min`).
-1. bulloak expects you to use ├ and └ characters to denote branches
-1. If a branch starts with either `when` or `given`, it is a condition. `when` and `given` are interchangeable.
-1. If a branch starts with `it`, it is an action. Any child branch an action has is called an action description.
+3. bulloak expects you to use ├ and └ characters to denote branches
+4. If a branch starts with either `when` or `given`, it is a condition. `when` and `given` are interchangeable.
+5. If a branch starts with `it`, it is an action. Any child branch an action has is called an action description.
 
 ## Examples
 
@@ -85,11 +85,11 @@ For examples, see [`./references/examples.md`](./references/examples.md).
 ## Rules
 
 1. The test file must be placed in the `tests/integration/concrete/{function}` directory.
-1. The directory name must use `-` format. For example, if the function name is `createFlowStream`, the corrresponding
+2. The directory name must use `-` format. For example, if the function name is `createFlowStream`, the corrresponding
    test tree and test file must be placed in the `tests/integration/concrete/create-flow-stream` directory.
-1. The tree file name must be `{function}.tree`.
-1. The test file name must be `{function}.t.sol`.
-1. The root node of the spec and the Contract name must be `{FunctionName}_Integration_Concrete_Test`.
+3. The tree file name must be `{function}.tree`.
+4. The test file name must be `{function}.t.sol`.
+5. The root node of the spec and the Contract name must be `{FunctionName}_Integration_Concrete_Test`.
 
 ## Workflow
 
@@ -205,6 +205,6 @@ ______________________________________________________________________
 Test this skill with these prompts:
 
 1. **Basic tree**: "Write a BTT tree for a `deposit` function that reverts when amount is zero and succeeds otherwise"
-1. **Complex tree**: "Create a tree spec for `withdraw` that checks null stream, caller authorization, and amount
+2. **Complex tree**: "Create a tree spec for `withdraw` that checks null stream, caller authorization, and amount
    validation"
-1. **Sablier-specific**: "Write a BTT tree for `cancel` in the Lockup protocol with proper stream state checks"
+3. **Sablier-specific**: "Write a BTT tree for `cancel` in the Lockup protocol with proper stream state checks"

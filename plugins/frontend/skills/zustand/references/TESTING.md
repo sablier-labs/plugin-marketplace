@@ -9,10 +9,10 @@ components using stores).
 ## Generic Testing Principles
 
 1. **State Isolation**: Reset all stores between tests to prevent state leakage
-1. **Testing Library**: Use React Testing Library (RTL) for UI component testing
-1. **Mock Network Requests**: Use Mock Service Worker (MSW) for API calls
-1. **Test from User Perspective**: Focus on behavior, not implementation details
-1. **TypeScript Support**: Ensure proper TypeScript configuration for type safety
+2. **Testing Library**: Use React Testing Library (RTL) for UI component testing
+3. **Mock Network Requests**: Use Mock Service Worker (MSW) for API calls
+4. **Test from User Perspective**: Focus on behavior, not implementation details
+5. **TypeScript Support**: Ensure proper TypeScript configuration for type safety
 
 ## Vitest Setup
 
@@ -111,9 +111,9 @@ export default defineConfig((configEnv) =>
 The mock automatically:
 
 1. **Captures Initial State**: Stores the initial state when a store is created
-1. **Tracks Reset Functions**: Collects reset functions in a Set as stores are created
-1. **Resets After Each Test**: The `afterEach()` hook resets all tracked stores to their initial state
-1. **Uses act()**: Wraps state resets with React's `act()` to maintain test stability
+2. **Tracks Reset Functions**: Collects reset functions in a Set as stores are created
+3. **Resets After Each Test**: The `afterEach()` hook resets all tracked stores to their initial state
+4. **Uses act()**: Wraps state resets with React's `act()` to maintain test stability
 
 This automatic approach eliminates manual reset logic and prevents test pollution.
 
