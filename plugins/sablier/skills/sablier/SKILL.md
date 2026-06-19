@@ -127,16 +127,16 @@ into existing products.
 Sablier smart contracts are deployed across **27+ EVM chains** including Ethereum, Arbitrum, Optimism, Base, Polygon,
 Avalanche, and BSC.
 
-Sablier programs are also deployed on **Solana**.
+Sablier programs are also deployed on **Solana**. There is no hosted Solana UI; access it via the SDK, the onchain
+program directly, or this AI skill.
 
 ### User Interfaces
 
-| Network    | Interface                                        |
-| ---------- | ------------------------------------------------ |
-| EVM chains | [app.sablier.com](https://app.sablier.com)       |
-| Solana     | [solana.sablier.com](https://solana.sablier.com) |
+| Network    | Interface                                  |
+| ---------- | ------------------------------------------ |
+| EVM chains | [app.sablier.com](https://app.sablier.com) |
 
-Both interfaces provide full access to create, manage, and withdraw from distributions without writing code.
+The EVM interface provides full access to create, manage, and withdraw from distributions without writing code.
 
 ## Developer Integration
 
